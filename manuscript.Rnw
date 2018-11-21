@@ -1,0 +1,185 @@
+%% jbc-template.tex, version 1.0, 2016/08/16
+\documentclass[11pt,letter]{article}
+
+\usepackage{fontspec} % must use xelatex to compile
+\usepackage{graphicx}
+
+\usepackage[tt=false]{libertine}
+
+% These packages can be used!
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage[version=3]{mhchem}
+\usepackage[colorlinks=true, allcolors=black, breaklinks=true]{hyperref}
+\usepackage{breakcites}
+\usepackage{authblk}
+\usepackage[margin=1.0in]{geometry}
+\usepackage[explicit]{titlesec}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{fmtcount}
+\usepackage{tocloft}
+
+%\usepackage[nomarkers,nolists,heads]{endfloat}
+
+\titleformat{\subsection}[runin]
+  {\normalfont\itshape}{\thesubsection}{1em}{#1 ---}
+
+%% Citations and references
+\usepackage[numbers,round,sort&compress]{natbib}
+
+\makeatletter
+\renewcommand\@biblabel[1]{\makebox[0.1in][l]{#1.}}
+\renewcommand{\bibsection}{}
+\renewcommand{\bibpreamble}{\vspace*{-\parskip}\ignorespaces}
+\renewcommand{\abstractname}{\vspace{-\baselineskip}}
+\renewcommand\fps@figure{hbp}
+\renewcommand\fps@table{hbp}
+\makeatletter
+\makeatother
+
+\setlength{\bibsep}{0pt}
+
+%\usepackage[numbers,round,sort&compress]{natbib}
+\usepackage[parfill]{parskip}
+
+\usepackage[font={footnotesize},labelfont=bf]{caption}
+
+ % custom macros
+\newcommand{\Tm}{T\textsubscript{m}}
+\newcommand{\DeltaTm}{Δ\Tm}
+\newcommand{\primary}{1°}
+\newcommand{\secondary}{2°}
+\newcommand{\tertiary}{3°}
+\newcommand{\quaternary}{4°}
+\newcommand{\todo}[1]{\textcolor{red}{#1}}
+\newcommand{\ahelix}{α-helix}
+\newcommand{\bsheet}{β-sheet}
+\newcommand{\sw}[1]{\texttt{#1}}
+\newcommand{\sem}{\sigma_{\bar{x}}}
+\newcommand{\micro}{μ}
+\newcommand{\milli}{m}
+\newcommand{\gram}{g}
+\newcommand{\liter}{L}
+\newcommand{\meter}{m}
+\newcommand{\molar}{\textsc{M}}
+\newcommand{\celsius}[1]{#1°C}
+\newcommand{\rcf}[1]{#1×\textit{g}}
+\newcommand{\mz}[1]{#1 \textit{m}/\textit{z}}
+%\renewcommand\todo[1]{}
+
+\title{Proteome-wide analysis of protein thermal stability in
+    the model higher plant \textit{Arabidopsis thaliana}}
+
+% Use \authormark if required to clarify multiple institutions
+\author[1]{Jeremy D. Volkening}
+\author[2]{Kelly E. Stecker}
+\author[1]{Michael R. Sussman\thanks{corresponding author, Tel 608.262.8608, Email msussman@wisc.edu}}
+
+\affil[1]{Department of Biochemistry, University of Wisconsin-Madison,
+    Madison, WI 53706}
+
+\affil[2]{Biomolecular Mass Spectrometry and Proteomics, Utrecht University,
+    Utrecht, Netherlands}
+
+% don't print date on title page
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+Running title: \textit{Arabidopsis thermal proteome}
+\end{center}
+
+\vspace*{2em}
+
+\Sexpr{knit_child('knitr_setup.Rnw')}
+
+\newpage
+\section*{\textsc{Abbreviations}}
+\input{abbreviations}
+\newpage
+
+%----------------------------------------------------------------------------%
+
+\begin{abstract}
+\section*{\textsc{Summary}}
+\input{abstract}
+\end{abstract}
+
+%----------------------------------------------------------------------------%
+
+\section*{\textsc{Introduction}}
+\input{introduction}
+
+%----------------------------------------------------------------------------%
+
+\section*{\textsc{Experimental Procedures}}
+\Sexpr{knit_child('methods.Rnw')}
+
+%----------------------------------------------------------------------------%
+
+\section*{\textsc{Results}}
+\Sexpr{knit_child('results.Rnw')}
+
+%----------------------------------------------------------------------------%
+
+\section*{\textsc{Discussion}}
+\Sexpr{knit_child('discussion.Rnw')}
+
+%----------------------------------------------------------------------------%
+
+\subsection*{Acknowledgments}
+This work was funded by NSF MCB grant 1713899, with additional support for JDV
+from a Morgridge Graduate Fellowship. The authors thank Heather Burch, Pei Liu
+and Greg Sabat for their technical and intellectual assistance in carrying out
+this work.
+%
+\subsection*{Conflicts} The authors declare that they have no conflicts of
+interest with the contents of this article.
+%
+\subsection*{Contributions} KES, JDV and MRS designed the experiments. KES
+performed the experiments. JDV and KES analyzed the data. JDV wrote the
+manuscript. JDV, KES, and MRS revised the manuscript.
+
+%----------------------------------------------------------------------------%
+
+% Bibliography 
+\section*{\textsc{References}}
+\bibliographystyle{mcp}
+{\footnotesize\bibliography{refs}}
+
+%----------------------------------------------------------------------------%
+
+%\begin{footnotes}
+%Footnotes should include details such as grant information, and any abbreviations used within the article.
+%\end{footnotes}
+\clearpage
+\renewcommand\cftfigafterpnum{\vskip10pt\par}
+\renewcommand\listfigurename{Figure Legends}
+\listoffigures
+
+\clearpage
+\section*{\textsc{Figures}}
+\Sexpr{knit_child('figures.Rnw')}
+
+%----------------------------------------------------------------------------%
+
+\clearpage
+\renewcommand\cftfigafterpnum{\vskip10pt\par}
+\renewcommand\listtablename{Table Legends}
+\listoftables
+
+\clearpage
+\section*{\textsc{Tables}}
+\Sexpr{knit_child('tables.Rnw')}
+
+%----------------------------------------------------------------------------%
+
+\clearpage
+\section*{\textsc{Supplemental Files}}
+\Sexpr{knit_child('supplemental_legends.Rnw')}
+
+%----------------------------------------------------------------------------%
+
+\end{document}

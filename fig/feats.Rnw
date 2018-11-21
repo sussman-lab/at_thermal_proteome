@@ -1,0 +1,35 @@
+<<fig_feats, cache=FALSE, include=TRUE, echo=FALSE, fig.height=2.5, fig.width=5, dev=c("postscript","pdf"), dev.args=list(pointsize=9), background=NA>>=
+
+par(mfrow=c(2,5),mar=c(1,2,3,1),oma=c(0.1,2,0.1,0.1))
+
+# generate boxplot series
+for (i in 1:9) {
+    boxplot( use[[ cats[i] ]] ~ use$bin4,
+        col=cols2, xaxt="n", notch=T, outline=F, font.main=2,
+        lwd=0.5)
+    title(titles[i],line=0.8)
+}
+
+# generate legend
+plot(0,0,cex=0,xlim=c(0,1),ylim=c(0,1),xaxt='n',yaxt='n',bty='n')
+labels <- character()
+for (i in 1:4) {
+    labels[i] <- sprintf('%.1f-%.1f°C',
+        bins.lower[i],
+        bins.upper[i]
+    )
+}
+par(xpd=T)
+legend("center", legend=labels, fill=cols2, bty='n', cex=1.25, title=expression(T[m]))
+par(xpd=F)
+
+# add subfigure markings
+mtext('a',at=.72,side=2,outer=T,cex=1.2,las=1,line=1.0,font=2)
+mtext('b',at=.22,side=2,outer=T,cex=1.2,las=1,line=1.0,font=2)
+
+# add horizontal divider
+par(xpd=NA)
+abline(h=1.35)
+
+@
+

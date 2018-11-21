@@ -1,0 +1,7 @@
+name	sample	data_file	meta_file
+C1	C1	data.rmbaseline/C1.pp.f0.01.tsv	meta/C1.meta
+C2	C2	data.rmbaseline/C2.pp.f0.01.tsv	meta/C2.meta
+C3	C3	data.rmbaseline/C3.pp.f0.01.tsv	meta/C3.meta
+C4	C4	data.rmbaseline/C4.pp.f0.01.tsv	meta/C4.meta
+C5	C5	data.rmbaseline/C5.pp.f0.01.tsv	meta/C5.meta
+C6	C6	data.rmbaseline/C6.pp.f0.01.tsv	meta/C6.meta

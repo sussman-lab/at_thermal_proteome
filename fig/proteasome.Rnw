@@ -1,0 +1,32 @@
+<<fig_proteasome, cache=FALSE, include=FALSE, echo=FALSE>>=
+
+if(!require("dplyr")) install.packages("dplyr", repos="http://cran.us.r-project.org")
+if(!require("tidyr")) install.packages("tidyr", repos="http://cran.us.r-project.org")
+library(dplyr)
+library(tidyr)
+source("../R/filters/mod_svg.R")
+
+map <- read.delim("../R/filters/proteasome_name_map.tsv")
+
+proteasome_core <- scan("../R/lists/proteasome_core.grp.list",what="character")
+proteasome_base <- scan("../R/lists/proteasome_base.grp.list",what="character")
+proteasome_lid  <- scan("../R/lists/proteasome_lid.grp.list",what="character")
+proteasome <- c(proteasome_core, proteasome_base, proteasome_lid)
+
+prot <- MC[rownames(MC) %in% proteasome,]
+prot$Row.names <- rownames(prot)
+df <- prot %>%
+    unnest(Row.names=strsplit(Row.names, "|", fixed=T))
+
+quant <- merge(df,map,by.x="Row.names",by.y="atid",all.x=T)
+
+mod_svg(
+    quant,
+    "proteasome_blank.svg",
+    "../figure/proteasome"
+)
+
+@
+
+\includegraphics[width=0.5\textwidth]{figure/proteasome}
+

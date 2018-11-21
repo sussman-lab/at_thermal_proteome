@@ -1,0 +1,230 @@
+%----------------------------------------------------------------------------%
+\subsection*{Experimental design and statistical rationale}
+%----------------------------------------------------------------------------%
+
+For the generation of the core \Tm{} database and analysis of factors
+affecting thermostability, six untreated biological replicates were used.
+These replicates were grown and processed at different times over the course
+of several months to minimize batch effects. The relatively high number of
+biological replicates was used to overcome the low degree of sample-to-sample
+overlap in protein IDs which is common in shotgun MS/MS experiments. For the
+ATP treatment study, single biological replicates were used for treatment and
+control. The lack of replicates was primarily a cost consideration, and we
+justified this choice on the basis that (1) this was primarily a proof of
+principle on the application of a new technology in the plant kingdom, and (2)
+we were looking for a broad response across a large family of proteins rather
+than for a reproducible response in any given protein. Additionally, each
+replicate with eight or more underlying PSMs has 90\% confidence intervals
+applied to both the individual datapoints (vertical error bars) and \Tm{}
+estimates (horizontal shading) using the bootstrap method described previously
+\cite{savitski_tracking_2014}. The various statistical filters applied and
+methods used for significance testing are fully described below in the
+relevant sections. Of note, no multiple testing correction was
+applied to the GO enrichment p-values as the package authors suggest it is
+redundant with the algorithm used. This agreed with our own observations that
+Benjamini-Hochberg correction applied to the results seemed to be overly
+conservative. However, stringent cutoffs (p < \Sexpr{cutoffs.go[['bin1']]} and
+\Sexpr{cutoffs.go[['bin4']]} for lower and upper bins) were applied to the
+terms reported herein.
+
+%----------------------------------------------------------------------------%
+\subsection*{Tissue propagation, harvesting and treatment}
+%----------------------------------------------------------------------------%
+
+Arabidopsis Col-0 seeds were grown in liquid medium (0.5× Murashige and Skoog
+salts, 1\%\ (w/v) sucrose, 0.05\%\ (w/v) MES, pH 5.7) under constant light for
+11 days. Tissue balls were immersed in deionized water and gently spun in a
+commercial salad spinner to remove adhering solution. For untreated replicates
+C1, C2, C5, and C6, tissue was flash frozen in liquid nitrogen, homogenized
+with mortar and pestle, and resuspended in ice-cold homogenization buffer (230
+\milli\molar\ sorbitol, 50 \milli\molar\ Tris-HCl pH 7.5, 10 \milli\molar\
+KCl, 3 \milli\molar\ EGTA, and the following protease inhibitors added fresh:
+1 \milli\molar\ potassium metabisulfite, 1 \milli\molar\ PMSF, 0.5
+\micro\gram/\milli\liter\ leupeptin, 0.7 \micro\gram/\milli\liter\ pepstatin,
+1 Roch protease inhibitor tablet). For untreated replicates C3 and C4 and the
+ATP treated and control samples, homogenization was performed without freezing
+by placing rinsed tissue balls in 70 \micro\liter\ of homogenization buffer
+and grinding in an upright tissue blender for 30 s at maximum speed. For all
+samples, the tissue homogenate was cleared by filtering through two layers of
+Mira-cloth (Calbiochem), placed in a chilled centrifuge tube and spun at
+\rcf{100,000} for 20\ min  at \celsius{4}. For the \textit{in vitro} ATP
+binding experiment, Mg-ATP or mock solution was added to 2 \milli\liter\ of
+crude extract to a final concentration of 2 \milli\molar\ and incubated for 15
+min at room temperature. In this experiment, one biological replicate was
+performed for treated and control conditions.
+
+%----------------------------------------------------------------------------%
+\subsection*{Gradient precipitation}
+%----------------------------------------------------------------------------%
+
+Each sample was aliquoted into ten microfuge tubes in volumes ranging from 0.2
+to 1.0 \milli\liter{} for different experiments (to normalize protein
+concentrations) and placed on equilibrated heating blocks containing mineral
+oil to facilitate rapid thermal transfer across the tube wall. The following
+ten-temperature gradients were used for each replicate: \celsius{21.0--61.5}
+(C1--C2) and \celsius{25.0--65.5} (C3--C6). Tubes were incubated at the given
+temperature for ten minutes, removed and allowed to cool for ten minutes at
+room temperature, and placed on ice. Tubes were spun at \rcf{17,000} for 20
+min at \celsius{4} to pellet precipitated protein and the supernatant was
+carefully transferred to a new microfuge tube. At this stage, 1.0 \micro\gram\
+of bovine serum albumin (BSA) was spiked into each tube as an internal
+standard to facilitate downstream data normalization.
+
+%----------------------------------------------------------------------------%
+\subsection*{Protein extraction, digestion, and cleanup}
+%----------------------------------------------------------------------------%
+
+Methanol-chloroform protein extraction was performed on the cleared
+supernatant as described previously \cite{minkoff_pipeline_2014} and protein
+pellets were resuspended in 8 \molar\ urea. The 660nm Protein Assay Reagent
+kit (Pierce) was used to quantify proteins in each sample at this stage for
+later use in orthogonal data normalization. Extracts were diluted to a final
+concentration of 4 \molar\ urea using 50 \milli\molar\ ammonium bicarbonate,
+reduced with 5 \milli\molar\ DTT for 45 min in a \celsius{42} water bath, and
+alkylated with 15 \milli\molar\ iodoacetic acid for 45 min in the dark at room
+temperature. Alkylation was quenched by adding 5 \milli\molar\ DTT for 5 min
+at room temperature. Protein was digested with LysC (Wako) at a 1:60
+enzyme:protein ratio at \celsius{37} for 2 hr. Samples were diluted to 1.2
+\molar\ urea and digested with trypsin (Promega) at a 1:40 enzyme:protein
+ratio at \celsius{37} overnight. A minimum of 0.1 \micro\gram\ of LysC and 0.2
+\micro\gram\ of trypsin was added to all samples. De-salting was performed
+using OMIX C18 tips (100 \micro\liter\ capacity, Agilent) as follows. Digests
+were acidified to pH <3 using 20\% formic acid ($\sim$4 \micro\liter\ per 140
+\micro\liter\ digest). OMIX tips were equilibrated with 3×100\ \micro\liter\
+rinses of 75\% acetonitrile (ACN) followed by 4×100\ \micro\liter\ rinses of
+0.1\% TFA. Samples were bound to resin by pipetting up and down ten times,
+washed 2× with 100 \micro\liter\ 0.1\% TFA, washed 1× with 100 \micro\liter\
+0.01\% TFA, and eluted with 75 \micro\liter\ of 75\% ACN and 0.1\% formic acid
+into a low-protein-binding microfuge tube. Vacuum centrifugation was used to
+reduce sample volume for isobaric labeling.
+
+%----------------------------------------------------------------------------%
+\subsection*{Isobaric labeling}
+%----------------------------------------------------------------------------%
+
+Digests were resuspended in 25 \micro\liter\ of 150 \milli\molar\ TEAB, 5\%
+ACN. TMT-10plex reagents (Thermo Fisher Scientific) were resuspended in 75
+\micro\liter\ 100\% ACN to a concentration of 10.7 \micro\gram/\micro\liter.
+TMT reagents and protein digests were mixed to achieve a 3:1 label:protein
+ratio in a 40 \micro\liter\ volume at 60\% TEAB and 40\% ACN. The actual label
+and protein concentration in each tube varied as higher temperature fractions
+contained less protein, but a minimum label concentration of 1.33
+\micro\gram/\micro\liter\ was used. The specific isobaric tag used for each
+temperature was varied from replicate to replicate (see supplemental materials
+for exact assignments). Samples were labeled for 2 hrs at room temperature and
+quenched by adding 5 \micro\liter\ of 5\% hydroxylamine solution for 15 min at
+room temperature. All ten temperature fractions for each sample were then
+pooled.
+
+%----------------------------------------------------------------------------%
+\subsection*{Offline fractionation}
+%----------------------------------------------------------------------------%
+
+Samples were vacuum centrifuged to remove ACN and subjected to offline high-pH
+RP-HPLC fractionation using a Waters 2795 Separation Module HPLC, Gemini C18 5
+\micro\meter\ 110A 4.6mm×250mm column (Phenomenex), and a Gibson model 201
+fraction collector. The HPLC conditions were as follows: Buffer A (10
+\milli\molar\ ammonium formate); Buffer B (10 \milli\molar\ ammonium formate,
+80\% ACN); 35 min total gradient time at a flow rate of 1.0 \milli\liter/min;
+5--60\% B from 3--23 min; 100\% B wash from 25--26 min; 0\% B for all other
+time periods. Fractions were collected every minute and fractions 15--27 were
+used for downstream analysis. Samples were dried in a vacuum centrifuge and
+resuspended in 0.1\% FA for LC-MS injection.
+
+%----------------------------------------------------------------------------%
+\subsection*{LC-MS/MS}
+%----------------------------------------------------------------------------%
+
+Samples were analyzed on an Orbitrap Elite mass spectrometer (Thermo). Inline
+nanoflow HPLC was performed on a C18 column at a flow rate of 300 n\liter/min
+using the following 2-hr gradient: solvent A (0.1\% FA); solvent B (95\% ACN,
+0.1\% FA); 0\% B at min 0--30; 3\% B at min 31; 30\% B at min 108; 50\% B at
+min 113; 95\% B at min 118; 0\% B at min 123--126. MS/MS spectral data were
+acquired using the following settings: MS1 acquisition at 120,000 resolving
+power and a mass range of \mz{380--1800}. The top ten precursor ions for each
+scan period, subject to dynamic exclusion, were isolated for MS2 using a
+\mz{2.0} isolation window width and 200 ms maximum injection time. HCD
+fragmentation was used to produce product ions for analysis in the Orbitrap at
+30,000 resolving power and over a dynamic mass range starting at \mz{100} and
+bounded at the upper end relative to the precursor mass. 
+
+%----------------------------------------------------------------------------%
+\subsection*{Data analysis}
+%----------------------------------------------------------------------------%
+
+Thermo RAW files were converted to centroided mzML using msconvert
+\cite{chambers_cross-platform_2012} version 3.0.7494 with vendor-supplied
+peak-picking. A search database was generated from the TAIR10 representative
+protein sequences concatenated with the GPM cRAP database of common
+contaminants (\url{http://www.thegpm.org/crap/}) which includes the BSA
+spike-in sequence. A set of decoy sequences generated by reversing the
+original sequences was added, and the protein sequence order of the resulting
+database was randomized. The final database contained
+\Sexpr{length(search_db)} target and decoy sequences and is available in the
+supplemental data repository. The MS2 spectra were searched against this
+database using the \sw{comet} search engine \cite{eng_comet:_2013} version
+2016.01 rev. 3 with the following settings: trypsin cleavage (max 1 missed
+cleavage, min 2 tryptic termini), variable Asn/Gln deamidation, variable Met
+oxidation, static Cys carbamidomethylation, static N-term/Lys TMT labeling,
+0.03 fragment bin tolerance, 0.00 fragment bin offset, 10 ppm precursor mass
+tolerance, b/y ion series with \ce{NH3}/\ce{H2O} neutral loss. The exact
+configuration file used is available in the supplemental data repository.
+\sw{PeptideProphet} (TPP v4.8.0) was used to combine alkaline fractions and
+calculate posterior probabilities for spectral matches (accurate mass binning,
+non-parametric model) \cite{ma_statistical_2012}. PSMs were filtered to a 1\%
+FDR based on the per-charge probability ROC cutoffs reported by
+\sw{PeptideProphet}. Protein identification was performed using
+\sw{ProteinProphet} (TPP v4.8.0) with default settings
+\cite{nesvizhskii_statistical_2003}. Quantification of the TMT channels from
+each matching spectrum was performed using \sw{tmt\_quant} version 0.010
+(\url{https://github.com/jvolkening/ms_bin}), utilizing two-step run-specific
+recalibration of the channel windows and performing isotope interference
+calculation as previously described \cite{savitski_measuring_2013}. Full
+quantification data in tab-delimited format is available in the supplemental
+data repository.
+
+Protein-level quantification, normalization, curve-fitting and \Tm{}
+estimation were performed on the filtered PSM tables using our publicly
+available R package \sw{mstherm} version 0.4.8
+(\url{https://cran.r-project.org/package=mstherm}). Bootstrap-based 95\%
+confidence intervals were calculated as previously described
+\cite{savitski_tracking_2014} for all proteins matching the following
+filtering criteria: minimum total PSMs: \Sexpr{min_tot_psm}; minimum distinct
+peptides: \Sexpr{min_pep}; maximum co-isolation interference: \Sexpr{max_inf};
+maximum model slope: \Sexpr{max_slope}; minimum model $R^2$: \Sexpr{min_r2}.
+Protein-level quantification was performed based on summed channel intensities
+across spectra. Loess smoothing was performed on the data prior to model
+fitting.
+
+Protein primary characteristics (molecular weight, GRAVY, isoelectric point,
+CvP, etc) were calculated using \sw{ms-perl}
+(\url{http://github.com/jvolkening/p5-MS}). Predicted secondary structure
+features were calculated using the GOR algorithm as implemented in
+\sw{garnier} version 6.6.0.0 \cite{rice_emboss:_2000, garnier_analysis_1978}.
+Protein abundance values were extracted from the PaxDB Arabidopsis integrated
+whole-plant dataset \cite{wang_paxdb_2012}. Two statistical tests were used to
+test for significant patterns among thermostability bins. The Mann-Whitney U
+test was used to compare the lowest (unstable) and highest (stable) bins for
+difference in mean while Kendall's tau rank correlation was performed using
+ordinal bin numbers to test for correlation across all bins. All of the
+results reported regarding correlation of protein features with
+thermostability were calculated after removing the ribosomal proteins, which
+were highly abundant in the data and were observed to be skewing the results
+due to the specific amino acid composition of that protein class. Gene set
+enrichment analysis was performed with the R package \sw{topGO} version 2.28.0
+\cite{alexa_improved_2006} using the Fisher exact test and the elim algorithm. 
+
+For tertiary structure calculations, all available Arabidopsis protein
+structures and sequences were downloaded from the RCSB Protein Data Bank.
+Redundant chains (chains from the same structure with identical sequences)
+were collapsed to a single sequence, and the resulting database was clustered
+with the TAIR10 representative protein database using CD-HIT version 4.6,
+requiring a minimum identity of 0.98 and a minimum length overlap of 0.9. PDB
+structures with matches to TAIR10 proteins were retained for further analysis.
+The VADAR structural prediction server (version 1.5)
+\cite{willard_vadar:_2003} was used to calculate surface area values for each
+structure, and values from structures in the same CD-HIT cluster were averaged
+by mean. Correlation analysis was performed as described above using only
+those proteins with both structures and modeled \Tm{}s in the
+\Sexpr{used_name} set. Compactness was calculated as $3-\frac{SASA}{ISA}$,
+where $ISA$ is the surface area of a sphere of the same volume.

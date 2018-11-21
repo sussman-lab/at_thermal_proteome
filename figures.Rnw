@@ -1,0 +1,161 @@
+\begin{figure}\centering
+\includegraphics[width=0.8\textwidth]{fig/setup}
+
+\caption{Schematic of TPP workflow. Plants were grown hydroponically and protein
+was extracted as described in methods. Ten aliquots were incubated over a
+temperature gradient and the clarified supernatant was subjected to ten-channel
+isobaric labeling (one tag per temperature). Standard MS/MS-based
+quantification was used to produce protein-level relative abundance values
+which were fit to the two-state model as described.}
+
+\label{fig:intro}
+\end{figure}
+
+%----------------------------------------------------------------------------%
+
+\begin{figure}\centering
+\Sexpr{knit_child('fig/model.Rnw')}
+
+\caption{Modeling protein melting using TPP. Panel (a): MS/MS-based relative
+abundance data for a protein at ten temperature points is modeled according to
+the logistic function shown. The melting point (\Tm, red dashed line) is
+defined as the point where half of the protein remains in solution (green
+dashed line). The parameters are arranged such that $m$ is equal to \Tm{}, $k$
+controls the slope of the curve (purple dashed line) for a given value of $m$,
+and $p$ defines the lower asymptote. The exponential term in the denominator
+represents $K_{eq}$ of the unfolding equilibrium. Panel (b): An example of a
+protein profile from real-world Arabidopsis treatment data.}
+
+\label{fig:model}
+\end{figure}
+
+%----------------------------------------------------------------------------%
+
+\begin{figure}\centering
+\Sexpr{knit_child('fig/tm_dists.Rnw')}
+
+\caption{Distribution of melting temperatures in the Arabidopsis proteome.
+Shown are \Tm{} distributions from six biological replicates (gray lines)
+along with the distribution of median \Tm{}s (solid red line). Distributions
+represent data from the \Sexpr{used_name} dataset (\Sexpr{nrow(HC)} proteins
+modeled in \protect \numberstringnum{\Sexpr{cut_n_HC}} or more replicates with
+$\sem <$ \celsius{\Sexpr{cut_se_HC}}).}
+
+\label{fig:tm_dists}
+\end{figure}
+
+%----------------------------------------------------------------------------%
+
+\begin{figure}\centering
+\Sexpr{knit_child('fig/feats.Rnw')}
+
+\caption{Correlation between protein melting temperature and potential
+covariates. Panel (a) displays five covariates with highly statistically
+significant correlation (all $p < \Sexpr{max_sig}$) based on both the
+Mann-Whitney U test on lower and upper bins and the Spearman rank correlation
+test. Panel (b) shows four covariates with no significant correlation. Data is
+divided into four bins of equal membership, and colors indicate relative
+thermostablity from unstable (blue, left) to stable (red, right). All values
+are calculated directly from primary amino acid sequence (see Methods for more
+detail).}
+
+\label{fig:feats}
+\end{figure}
+
+%----------------------------------------------------------------------------%
+
+\begin{figure}\centering
+\Sexpr{knit_child('fig/aa_enrich.Rnw')}
+
+\caption{Residue-specific enrichment in stable vs unstable protein bins. The
+x-axis shows log ratio of the median residue proportion in the most stable vs
+least stable bins, while the y-axis shows statistical significance by the
+Mann-Whitney U test. The values in green are for full protein sequences while
+the values in purple are limited to amino acid composition of predicted alpha
+helices. The dashed horizontal lines marks the 0.05 significance level.} 
+
+\label{fig:aa_enrich}
+\end{figure}
+
+%----------------------------------------------------------------------------%
+
+\begin{figure}\centering
+\Sexpr{knit_child('fig/tertiary.Rnw')}
+
+\caption{Correlation between protein melting temperature and tertiary
+structure. Two covariates with statistically significant correlation (based on
+Mann-Whitney U test) are shown at top (non-polar ASA:
+$p=\Sexpr{tertiary.p[['np']]}$; charged ASA: $p=\Sexpr{tertiary.p[['chg']]}$).
+The lower plot shows compactness relative to thermostability, where
+compactness is calculated as $3-\frac{SASA}{ISA}$ and $ISA$ is the surface
+area of a sphere of the same volume as the protein. Although hypothesized to
+affect thermostability, no correlation is seen
+($p=\Sexpr{tertiary.p[['cmp']]}$). Data is divided into four bins of equal
+membership, and colors indicate relative thermostablity from unstable (blue,
+left) to stable (red, right). A total of \Sexpr{nrow(vadar.used)} proteins
+with known structures and thermal models were analyzed.} 
+
+\label{fig:tertiary}
+\end{figure}
+
+%----------------------------------------------------------------------------%
+
+\begin{figure}\centering
+\Sexpr{knit_child('fig/proteasome.Rnw')}
+
+\caption{Melting temperatures of the 26S proteasome subunits. Shading
+indicates median \Tm{} for that subunit (or yellow for unmodeled). Subunits
+with paralogous family members are indicated by a vertical divider. The MC
+dataset was used to generate the \Tm{} values in order to maximum subunit
+coverage.}
+
+\label{fig:proteasome}
+\end{figure}
+
+%----------------------------------------------------------------------------%
+
+\begin{figure}\centering
+\Sexpr{knit_child('fig/atp.Rnw')}
+
+\caption{Thermostability shifts upon Mg-ATP treatment. Shown are \DeltaTm{}
+distributions for treated vs control replicates. Proteins are grouped
+according to: panel (a): annotated as ATP-binding; panel (b): annotated as
+kinases; panel (c): annotated as magnesium-binding. Included in the analysis
+were \Sexpr{length(delta.atp)} proteins, of which \Sexpr{length(atp_bind)}
+were annotated as ATP-binding, \Sexpr{length(kinase)} were annotated as
+kinases, and \Sexpr{length(Mg_bind)} were annotated as Mg-binding.
+Mann-Whitney \textit{p}-values for difference of means for the three
+comparisons were \Sexpr{atp_bind.pval} (ATP-binding), \Sexpr{kinases.pval}
+(kinases), and \Sexpr{Mg_bind.pval} (Mg-binding).}
+
+\label{fig:atp}
+\end{figure}
+
+%----------------------------------------------------------------------------%
+
+\begin{figure}\centering
+\Sexpr{knit_child('fig/se.Rnw')}
+
+\caption{Protein-specific variance in \Tm{} estimates. Most proteins behave
+relatively reproducibly between replicates and experiments (a). Higher
+measurement variance is often associated with lower abundance but not always,
+as some proteins are consistent at low PSM counts (b) while others have
+consistently high variance even at higher abundance (c).}
+
+\label{fig:se}
+\end{figure}
+
+%----------------------------------------------------------------------------%
+
+\begin{figure}\centering
+%\includegraphics[width=\maxwidth]{fig/ribo_tm_dists}
+\Sexpr{knit_child('fig/ribo_tm_dists.Rnw')}
+
+\caption{Distribution of Arabidopsis ribosomal protein \Tm{}s. 60S acidic
+proteins are a subset of the 60S set and thus are included twice. Data is
+taken from the MC protein set. The rightmost plot (``universe'') shows the
+\Tm{} distribution for all modeled and filtered proteins in the MC dataset for
+the sake of comparison.}
+
+\label{fig:ribo_tms}
+\end{figure}

@@ -1,0 +1,30 @@
+<<fig_tertiary, cache=FALSE, include=TRUE, echo=FALSE, fig.height=2.8, fig.width=3.5, dev=c("postscript","pdf"), dev.args=list(pointsize=9), background=NA>>=
+
+par(mfrow=c(2,2),mar=c(1,2,1,1),oma=c(0.1,2,0.1,0.1))
+
+# generate boxplot series
+boxplot(vadar.used$npfrac ~ vadar.used$bin4, notch=F, xaxt='n', outline=F, col=cols2, main='non-polar ASA', font.main=1, lwd=0.5)
+boxplot(vadar.used$chgfrac ~ vadar.used$bin4, notch=F, xaxt='n', outline=F, col=cols2, main='charged ASA', font.main=1, lwd=0.5)
+boxplot(vadar.used$compactness ~ vadar.used$bin4, notch=F, xaxt='n', outline=F, col=cols2, main='compactness', font.main=1, lwd=0.5)
+
+bins.lower <- numeric()
+bins.upper <- numeric()
+for (i in 1:4) {
+    bins.lower[i] <- min(vadar.used$median[vadar.used$bin4 == i])
+    bins.upper[i] <- max(vadar.used$median[vadar.used$bin4 == i])
+}
+labels <- character()
+for (i in 1:4) {
+    labels[i] <- sprintf('%.1f-%.1f°C',
+        bins.lower[i],
+        bins.upper[i]
+    )   
+}
+# generate legend
+plot(0,0,cex=0,xlim=c(0,1),ylim=c(0,1),xaxt='n',yaxt='n',bty='n')
+par(xpd=T)
+legend("center", legend=labels, fill=cols2, bty='n', cex=1.25, title=expression(T[m]))
+par(xpd=F)
+
+@
+

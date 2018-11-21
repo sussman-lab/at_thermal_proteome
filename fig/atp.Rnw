@@ -1,0 +1,102 @@
+<<fig_atp, cache=FALSE, include=TRUE, echo=FALSE, fig.height=2, fig.width=5, dev=c("postscript","pdf"), dev.args=list(pointsize=9), background=NA>>=
+
+library(RColorBrewer)
+
+kde.no_atp_bind <- density(no_atp_bind,na.rm=T)
+kde.atp_bind    <- density(atp_bind,na.rm=T)
+
+kde.nokinase <- density(nokinase,na.rm=T)
+kde.kinase   <- density(kinase,na.rm=T)
+
+kde.no_Mg_bind <- density(no_Mg_bind,na.rm=T)
+kde.Mg_bind    <- density(Mg_bind,na.rm=T)
+
+kde.all <- density(delta.atp,na.rm=T)
+
+mu <- median(delta.atp,na.rm=T)
+sd <- mad(delta.atp,na.rm=T)
+
+par(
+    mfrow = c(1, 3),
+    mgp = c(2.2, 0.7, 0),
+    mar=c(3.5,3.5,0.5,0.5),
+    oma=c(0,0,1.5,1.5)
+)
+
+cols <- brewer.pal(8, "Set1")
+alpha <- "33"
+
+cols_alpha <- c()
+for (i in 1:length(cols)) {
+    cols_alpha[i] <- paste0(cols[i],alpha)
+}
+
+# ATP-binding
+
+plot(kde.no_atp_bind,cex=0,xlim=c(-12,12),ylim=c(0,max(kde.no_atp_bind$y,kde.atp_bind$y)*1.3),xlab=expression(paste(Delta, T[m])),ylab="density",main=NA)
+
+polygon(kde.atp_bind,    col=cols_alpha[1],  border=NA)
+polygon(kde.no_atp_bind, col=cols_alpha[2],  border=NA)
+
+lines(kde.atp_bind,    col=cols[1], lwd=2)
+lines(kde.no_atp_bind, col=cols[2], lwd=2)
+
+abline(v=median(atp_bind,na.rm=T),    col=cols[1], lty=5)
+abline(v=median(no_atp_bind,na.rm=T), col=cols[2], lty=5)
+
+legend("topleft", c("annotated ATP-binding","other"), fill=cols_alpha, border= cols, bty="n")
+#mtext("(a)", side = 3, adj = 0.05, padj = 0.5, line = -1.3, font=2)
+mtext("(a)", side = 2, adj = 0.5, padj = 0.5, line = -1.3, font=2, las=1)
+
+# kinases
+
+plot(kde.nokinase,cex=0,xlim=c(-12,12),ylim=c(0,max(kde.nokinase$y,kde.kinase$y)*1.3),xlab=expression(paste(Delta, T[m])),ylab="density",main=NA)
+
+polygon(kde.kinase,   col=cols_alpha[1], border=NA)
+polygon(kde.nokinase, col=cols_alpha[2], border=NA)
+
+lines(kde.kinase,   col=cols[1], lwd=2)
+lines(kde.nokinase, col=cols[2], lwd=2)
+
+abline(v=median(kinase,na.rm=T),   col=cols[1], lty=5)
+abline(v=median(nokinase,na.rm=T), col=cols[2], lty=5)
+
+legend("topleft", c("annotated kinases","other"), fill=cols_alpha, border= cols, bty="n")
+mtext("(b)", side = 2, adj = 0.5, padj = 0.5, line = -1.3, font=2, las=1)
+
+# Mg binding
+
+plot(kde.no_Mg_bind,cex=0,xlim=c(-12,12),ylim=c(0,max(kde.no_Mg_bind$y,kde.Mg_bind$y)*1.3),xlab=expression(paste(Delta, T[m])),ylab="density",main=NA)
+
+polygon(kde.Mg_bind,    col=cols_alpha[1], border=NA)
+polygon(kde.no_Mg_bind, col=cols_alpha[2], border=NA)
+
+lines(kde.Mg_bind,    col=cols[1], lwd=2)
+lines(kde.no_Mg_bind, col=cols[2], lwd=2)
+
+abline(v=median(Mg_bind,na.rm=T),    col=cols[1], lty=5)
+abline(v=median(no_Mg_bind,na.rm=T), col=cols[2], lty=5)
+
+legend("topleft", c("annotated Mg-binding","other"), fill=cols_alpha, border= cols, bty="n")
+mtext("(c)", side = 2, adj = 0.5, padj = 0.5, line = -1.3, font=2, las=1)
+
+# dist fit
+
+#plot(kde.all,xlim=c(-15,15),ylim=c(0,max(kde.all$y)*1.3),xlab=expression(paste(Delta, T[m])),ylab="density",main=NA)
+#curve(dnorm(x, mu, sd), lwd=1, col=cols[1], add=T, lty=2)
+#z <- (delta.atp - mu)/sd
+#p <- 2*pnorm(-abs(z))
+#q <- p.adjust(p,method="BH")
+#q.bind   <- q[rownames(d.atp)  %in% binding]
+#q.kinase <- q[rownames(d.atp)  %in% kinases]
+#
+#
+#q <- q[!is.na(q)]
+#q.bind   <- q.bind[!is.na(q.bind)]
+#q.kinase <- q.kinase[!is.na(q.kinase)]
+##
+#bind.sig   <- table(q.bind   < 0.05)[[2]]
+#kinase.sig <- table(q.kinase < 0.05)[[2]]
+#all.sig    <- table(q        < 0.05)[[2]]
+#mtext(paste(bind.sig, length(q.bind), kinase.sig, length(q.kinase), all.sig, length(q)), side = 3, adj = 0.05, padj = 0.15, line = -1.3, font=2)
+##

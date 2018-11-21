@@ -1,0 +1,17 @@
+<<fig_se, cache=FALSE, include=TRUE, echo=FALSE, fig.height=4, fig.width=5, dev=c("postscript","pdf"), dev.args=list(pointsize=9), background=NA>>=
+
+library(mstherm)
+
+layout(matrix(c(1,1,1,1,2,2,3,3,2,2,3,3), 3, 4, byrow = TRUE))
+
+hist(all_se,breaks=100,xlim=c(0,5),col="gray",prob=T,xlab=expression(standard~error~of~T[m]),ylab="density",main=NA)
+mtext("(a)", side = 3, adj = 0.05, padj = 0.5, line = 1, font=2)
+
+plot(res.norm$AT1G02150,header=F)
+mtext("(b)", side = 3, adj = 0, padj = 0.5, line = 1, font=2)
+
+plot(res.norm$AT4G37930,header=F)
+mtext("(c)", side = 3, adj = 0, padj = 0.5, line = 1, font=2)
+
+@
+

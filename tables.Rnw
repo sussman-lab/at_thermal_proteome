@@ -1,0 +1,23 @@
+\begin{table}\centering
+\caption{Gene Ontology terms enriched in proteins with the lowest \Tm{}s
+(\Sexpr{sprintf('%.1f-%.1f°C', bins.lower[1], bins.upper[1])}).
+MF=molecular function; BP=biological process; CC=cellular compartment. Shown
+are all terms with Fisher's $p < \Sexpr{cutoffs.go[['bin1']]}$. No multiple testing
+correction was applied as per the algorithm recommendations.}
+\Sexpr{knit_child('tbl/4-1.Rnw')}
+\label{tbl:gsea-unstable}
+\end{table}
+
+%----------------------------------------------------------------------------%
+
+\begin{table}\centering
+\caption{Gene Ontology terms enriched in proteins with the highest \Tm{}s
+(\Sexpr{sprintf('%.1f-%.1f°C', bins.lower[4], bins.upper[4])}).
+MF=molecular function; BP=biological process; CC=cellular compartment. Shown
+are all terms with Fisher's $p < \Sexpr{cutoffs.go[['bin4']]}$. No multiple testing
+correction was applied as per the algorithm recommendations.}
+\Sexpr{knit_child('tbl/4-4.Rnw')}
+\label{tbl:gsea-stable}
+\end{table}
+
+

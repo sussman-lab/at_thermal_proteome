@@ -1,0 +1,3 @@
+name	sample	data_file	meta_file
+ATP	ATP	data.rmbaseline/atp.pp.f0.01.tsv	meta/atp.meta
+Ctl	Ctl	data.rmbaseline/ctrl_atp.pp.f0.01.tsv	meta/ctrl_atp.meta

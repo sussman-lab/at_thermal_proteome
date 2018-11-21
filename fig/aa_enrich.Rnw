@@ -1,0 +1,18 @@
+<<fig_aa_enrich, cache=FALSE, include=TRUE, echo=FALSE, fig.height=3.5, fig.width=3.5, dev=c("postscript","pdf"), dev.args=list(pointsize=9), background=NA>>=
+
+cols <- brewer.pal(9,"Set1")
+aa <- c("A","C","D","E","F","G","H","I","K","L","M","N","P","Q","R","S","T","V","W","Y")
+aa.helix <- as.character(sapply(aa, function(a) paste0(a,".helix"), simplify=T))
+delts       <- sapply(aa,       function(a) median(use[[a]][use$bin4 == 4]) / median(use[[a]][use$bin4==1]))
+delts.helix <- sapply(aa.helix, function(a) median(use[[a]][use$bin4 == 4]) / median(use[[a]][use$bin4==1]))
+p       <- sapply(aa,       function(a) cor.test(use[[a]], use$bin4, method="kendall",continuity=F)[['p.value']])
+p.helix <- sapply(aa.helix, function(a) cor.test(use[[a]], use$bin4, method="kendall",continuity=F)[['p.value']])
+plot(log(delts), -log(p),cex=0,xlab="log enrichment",ylab="-log p-value",xlim=c(-0.17,0.17),ylim=c(0,22))
+text(log(delts),       -log(p),       labels=aa, col=cols[3])
+text(log(delts.helix), -log(p.helix), labels=aa, col=cols[4])
+abline(v=0)
+abline(h=-log(.01),lty=2)
+legend(-0.05,21,fill=cols[3:4],legend=c("all",expression(paste(alpha,"-helix"))),bg="white")
+
+@
+

@@ -1,0 +1,15 @@
+<<go_1, results="asis", echo=F, warning=F, message=F>>=
+if(!require("xtable")) install.packages("xtable", repos="http://cran.us.r-project.org")
+library(xtable)
+t <- xtable(
+    dfs.go[['bin1']],
+    digits=c(0,0,0,0,0,1,-2),
+    format=c('s','s','s','d','d','f','E',)
+)
+print(
+    t,
+    hline.after=c(-1,-1,0,0,rules.go[['bin1']]),
+    floating=F,
+    include.rownames=F
+)
+@

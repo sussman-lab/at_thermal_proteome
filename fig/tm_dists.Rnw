@@ -1,0 +1,39 @@
+<<fig_tm_dists, cache=FALSE, include=TRUE, echo=FALSE, fig.height=3.5, fig.width=3.5, dev=c("postscript","pdf"), dev.args=list(pointsize=9), background=NA>>=
+
+ymax <- 0
+xmin <- 9999999
+xmax <- 0
+
+for (col in seq(from=4,length.out=n_reps,by=20)) {
+    d <- density(use.orig[[col]],na.rm=T)
+    if (max(d$y) > ymax) {
+        ymax <- max(d$y)
+    }
+    if (min(d$x) < xmin) {
+        xmin <- min(d$x)
+    }
+    if (max(d$x) > xmax) {
+        xmax <- max(d$x)
+    }
+}
+plot(d, ylim=c(0,ymax*1.1), xlim=c(xmin,xmax), lwd=0,
+    xlab=expression(T[m]), ylab="density",main=NA)
+d <- density(use.orig$median,na.rm=T)
+if (max(d$y) > ymax) {
+    ymax <- max(d$y)
+}
+if (min(d$x) < xmin) {
+    xmin <- min(d$x)
+}
+if (max(d$x) > xmax) {
+    xmax <- max(d$x)
+}
+for (col in seq(from=4,length.out=n_reps,by=20)) {
+    d <- density(use.orig[[col]],na.rm=T)
+    lines(d, col="#444444")
+}
+d <- density(use.orig$median,na.rm=T)
+lines(d, col=cols[1], lwd=3)
+
+@
+

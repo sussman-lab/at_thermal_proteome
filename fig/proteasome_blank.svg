@@ -1,0 +1,2991 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   height="317"
+   width="381"
+   version="1.1"
+   sodipodi:docname="proteasome_blank.svg"
+   inkscape:version="0.92.1 r15371">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="900"
+     id="namedview507"
+     showgrid="false"
+     inkscape:zoom="1.052853"
+     inkscape:cx="232.47564"
+     inkscape:cy="268.97987"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g2134" />
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient8967"
+       x1="-1110"
+       gradientUnits="userSpaceOnUse"
+       y1="659"
+       gradientTransform="matrix(0.789,0,0,0.63,-227.75667,238)"
+       x2="-922"
+       y2="659">
+      <stop
+         id="gradient_lower"
+         stop-color="#0022dd"
+         offset="0" />
+      <stop
+         id="gradient_middle"
+         stop-color="#ffffff"
+         offset=".5" />
+      <stop
+         id="gradient_upper"
+         stop-color="#dd2200"
+         offset="1" />
+    </linearGradient>
+    <filter
+       id="filter4161-6-6"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-2"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-9"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-1"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-7"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-0"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-3"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-6"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-62"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-61"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-79"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-20"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-79-7-2"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-20-5-2"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-79-7-2-8"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-20-5-2-9"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-79-7-2-8-3"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-20-5-2-9-6"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-79-7-2-8-2"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-20-5-2-9-9"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-79-7-2-8-2-1"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-20-5-2-9-9-9"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-79-7-2-8-2-7"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-20-5-2-9-9-8"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-79-7-2-8-2-0"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-20-5-2-9-9-3"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-79-7-2-8-2-10"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-20-5-2-9-9-6"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-79-7-2-8-2-2"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-20-5-2-9-9-0"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-79-7-2-8-2-5"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-20-5-2-9-9-5"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-79-7-2-8-2-6"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-20-5-2-9-9-56"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-6-3-5"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-2-7-2"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-6-3-54"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-2-7-7"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-6-3-4"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-2-7-3"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-6-3-7"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-2-7-8"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-6-3-8"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-2-7-84"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-6-3"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-2-7"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-6-3-49"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-2-7-20"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-6-3-5-9"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-2-7-2-2"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-6-3-5-9-4"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-2-7-2-2-9"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-6-3-5-9-0"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-2-7-2-2-4"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-6-3-5-9-7"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-2-7-2-2-1"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-6-3-5-9-2"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-2-7-2-2-7"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-6-3-5-9-26"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-2-7-2-2-10"
+         stdDeviation="4.3594143" />
+    </filter>
+    <filter
+       id="filter4161-6-6-3-5-9-1"
+       style="color-interpolation-filters:sRGB"
+       height="2.12"
+       width="1.49"
+       y="-.559"
+       x="-.246">
+      <feGaussianBlur
+         id="feGaussianBlur4163-7-2-7-2-2-5"
+         stdDeviation="4.3594143" />
+    </filter>
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     transform="matrix(.696 0 0 .696 1010 -420)">
+    <g
+       id="g7446"
+       transform="matrix(.387 0 0 .387 -887 647)">
+      <g
+         id="g1328">
+        <g
+           id="g7441"
+           transform="translate(0 7.43)">
+          <path
+             id="rect6967"
+             stroke="#000000"
+             stroke-width="2"
+             fill="none"
+             d="m-1440-20.3v-47.4h790v47.4" />
+          <text
+             id="text6970"
+             font-size="36px"
+             xml:space="preserve"
+             style="word-spacing:0px;letter-spacing:0px"
+             line-height="125%"
+             y="-83.847092"
+             x="-1155.6743"
+             font-family="'Courier 10 Pitch'"
+             fill="#000000"><tspan
+               id="tspan6972"
+               font-size="40px"
+               font-weight="600"
+               y="-83.847092"
+               x="-1155.6743"
+               font-family="FreeSans">lid complex</tspan></text>
+        </g>
+        <g
+           id="g4520">
+          <g
+             id="g1216">
+            <g
+               id="g7283"
+               transform="matrix(.423 0 0 1.23 -420 343)">
+              <g
+                 id="g3832-27-7-2-5"
+                 transform="matrix(-1.56 0 0 .555 -887 -297)">
+                <g
+                   id="g3828-41-2-5-5"
+                   transform="translate(946,19.5)">
+                  <path
+                     id="RPN6"
+                     d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h200c49 0 88 40 88 89v20c0 49-39 88-88 88h-100"
+                     fill="#dad371" />
+                </g>
+                <rect
+                   id="rect2985-4-9-9-1"
+                   ry="88.6"
+                   height="197"
+                   width="377"
+                   stroke="#000000"
+                   y="428"
+                   x="183"
+                   stroke-width="1.92"
+                   fill="none" />
+              </g>
+              <g
+                 id="g7273"
+                 transform="translate(23.96 0.00000358)">
+                <rect
+                   id="rect6043-2-4-8-8-46"
+                   fill-opacity="0.596"
+                   rx="24"
+                   ry="9.57"
+                   height="44.6"
+                   width="319"
+                   y="-27.6"
+                   x="-1650"
+                   fill="#ffffff" />
+                <text
+                   id="text4078-45-6-0-5-3-42"
+                   font-size="50px"
+                   line-height="125%"
+                   xml:space="preserve"
+                   style="word-spacing:0px;letter-spacing:0px"
+                   transform="scale(1.7 .587)"
+                   y="12.519058"
+                   x="-961.34753"
+                   font-family="'Courier 10 Pitch'"
+                   fill="#000000"><tspan
+                     id="tspan4080-6-9-0-4-2-5"
+                     font-size="61.1px"
+                     font-family="FreeSans"
+                     y="12.519058"
+                     x="-961.34753"
+                     font-weight="600">RPN6</tspan></text>
+              </g>
+            </g>
+            <path
+               id="path3351-3-23-9-7-3"
+               opacity=".51"
+               d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+               transform="matrix(4.95 0 0 2.29 5850 -1620)"
+               filter="url(#filter4161-6-79-7-2-8-2)"
+               fill="#ffffff" />
+          </g>
+          <g
+             id="g1204"
+             transform="translate(4.69 -1.87)">
+            <g
+               id="g6064-360-2-6-6-1"
+               transform="matrix(.423 0 0 1.23 -673 317)">
+              <g
+                 id="g7304">
+                <g
+                   id="g3832-27-5-1"
+                   transform="matrix(-1.56 0 0 .555 -894 -295)">
+                  <g
+                     id="g3828-41-6-3"
+                     transform="translate(946,19.5)">
+                    <path
+                       id="RPN5a"
+                       d="m-574 408h100c49 0 88 40 88 89v20c0 49-39 88-88 88h-100"
+                       fill="#dad371" />
+                    <path
+                       id="RPN5b"
+                       d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h100"
+                       fill="#dad371" />
+                    <path
+                       id="path4239-3-56-92-97"
+                       stroke="#000000"
+                       stroke-width="1.92"
+                       fill="none"
+                       d="m-574 408v197" />
+                  </g>
+                  <rect
+                     id="rect2985-4-5-5"
+                     ry="88.6"
+                     height="197"
+                     width="377"
+                     stroke="#000000"
+                     y="428"
+                     x="183"
+                     stroke-width="1.92"
+                     fill="none" />
+                </g>
+                <g
+                   id="g7294"
+                   transform="translate(17.9,1.63)">
+                  <rect
+                     id="rect6043-2-4-8-8-6"
+                     fill-opacity=".596"
+                     rx="20.8"
+                     ry="9.57"
+                     height="44.6"
+                     width="322"
+                     y="-26.9"
+                     x="-1650"
+                     fill="#ffffff" />
+                  <text
+                     id="text4078-45-6-0-5-3-1"
+                     font-size="50px"
+                     line-height="125%"
+                     xml:space="preserve"
+                     style="word-spacing:0px;letter-spacing:0px"
+                     transform="scale(1.7 .587)"
+                     y="13.714014"
+                     x="-960.76392"
+                     font-family="'Courier 10 Pitch'"
+                     fill="#000000"><tspan
+                       id="tspan4080-6-9-0-4-2-3"
+                       font-size="61.1px"
+                       font-weight="600"
+                       y="13.714014"
+                       x="-960.76392"
+                       font-family="FreeSans">RPN5</tspan></text>
+                </g>
+              </g>
+            </g>
+            <path
+               id="path3351-3-23-9-7-3-4"
+               opacity=".51"
+               d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+               transform="matrix(4.95 0 0 2.29 5600 -1640)"
+               filter="url(#filter4161-6-79-7-2-8-2-1)"
+               fill="#ffffff" />
+          </g>
+          <g
+             id="g1165">
+            <g
+               id="g6064-360-2-6-6-7"
+               transform="matrix(.423 0 0 1.23 -700 184)">
+              <g
+                 id="g7325">
+                <g
+                   id="g3832-27-5-1-7"
+                   transform="matrix(-1.56 0 0 .555 -877 -300)">
+                  <g
+                     id="g3828-41-6-3-0"
+                     transform="translate(946,19.5)">
+                    <path
+                       id="RPN9a"
+                       d="m-574 408h100c49 0 88 40 88 89v20c0 49-39 88-88 88h-100"
+                       fill="#dad371" />
+                    <path
+                       id="RPN9b"
+                       d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h100"
+                       fill="#dad371" />
+                    <path
+                       id="path4239-3-56-92-28"
+                       stroke="#000000"
+                       stroke-width="1.92"
+                       fill="none"
+                       d="m-574 408v197" />
+                  </g>
+                  <rect
+                     id="rect2985-4-5-5-4"
+                     ry="88.6"
+                     height="197"
+                     width="377"
+                     stroke="#000000"
+                     y="428"
+                     x="183"
+                     stroke-width="1.92"
+                     fill="none" />
+                </g>
+                <g
+                   id="g7315"
+                   transform="translate(34.4,-3.05)">
+                  <rect
+                     id="rect6043-2-4-8-8-7"
+                     fill-opacity=".596"
+                     rx="20.6"
+                     ry="9.57"
+                     height="44.6"
+                     width="319"
+                     y="-26.9"
+                     x="-1650"
+                     fill="#ffffff" />
+                  <text
+                     id="text4078-45-6-0-5-3-12"
+                     font-size="50px"
+                     line-height="125%"
+                     xml:space="preserve"
+                     style="word-spacing:0px;letter-spacing:0px"
+                     transform="scale(1.7 .587)"
+                     y="13.714014"
+                     x="-960.76392"
+                     font-family="'Courier 10 Pitch'"
+                     fill="#000000"><tspan
+                       id="tspan4080-6-9-0-4-2-1"
+                       font-size="61.1px"
+                       font-weight="600"
+                       y="13.714014"
+                       x="-960.76392"
+                       font-family="FreeSans">RPN9</tspan></text>
+                </g>
+              </g>
+            </g>
+            <path
+               id="path3351-3-23-9-7-3-45"
+               opacity=".51"
+               d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+               transform="matrix(4.95 0 0 2.29 5580 -1780)"
+               filter="url(#filter4161-6-79-7-2-8-2-7)"
+               fill="#ffffff" />
+          </g>
+          <g
+             id="g1177"
+             transform="translate(-2.81 .937)">
+            <g
+               id="g7346"
+               transform="matrix(.423 0 0 1.23 -440 207)">
+              <g
+                 id="g3832-27-7-2"
+                 transform="matrix(-1.56 0 0 .555 -892 -300)">
+                <g
+                   id="g3828-41-2-5"
+                   transform="translate(946,19.5)">
+                  <path
+                     id="RPN11"
+                     d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h200c49 0 88 40 88 89v20c0 49-39 88-88 88h-100"
+                     fill="#dad371" />
+                </g>
+                <rect
+                   id="rect2985-4-9-9"
+                   ry="88.6"
+                   height="197"
+                   width="377"
+                   stroke="#000000"
+                   y="428"
+                   x="183"
+                   stroke-width="1.92"
+                   fill="none" />
+              </g>
+              <g
+                 id="g7336"
+                 transform="translate(-4.45,-2.33)">
+                <rect
+                   id="rect6043-2-4-8-8-4"
+                   fill-opacity=".596"
+                   rx="23.9"
+                   ry="9.57"
+                   height="44.6"
+                   width="369"
+                   y="-27.6"
+                   x="-1650"
+                   fill="#ffffff" />
+                <text
+                   id="text4078-45-6-0-5-3-9"
+                   font-size="50px"
+                   line-height="125%"
+                   xml:space="preserve"
+                   style="word-spacing:0px;letter-spacing:0px"
+                   transform="scale(1.7 .587)"
+                   y="13.221438"
+                   x="-959.16797"
+                   font-family="'Courier 10 Pitch'"
+                   fill="#000000"><tspan
+                     id="tspan4080-6-9-0-4-2-6"
+                     font-size="61.1px"
+                     font-weight="600"
+                     y="13.221438"
+                     x="-959.16797"
+                     font-family="FreeSans">RPN11</tspan></text>
+              </g>
+            </g>
+            <path
+               id="path3351-3-23-9-7-3-6"
+               opacity=".51"
+               d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+               transform="matrix(4.95 0 0 2.29 5830 -1760)"
+               filter="url(#filter4161-6-79-7-2-8-2-0)"
+               fill="#ffffff" />
+          </g>
+          <g
+             id="g1189"
+             transform="translate(-.937)">
+            <g
+               id="g7367"
+               transform="matrix(.423 0 0 1.23 -190 195)">
+              <g
+                 id="g3832-27-4-6"
+                 transform="matrix(-1.56 0 0 .555 -890 -300)">
+                <g
+                   id="g3828-41-3-4"
+                   transform="translate(946,19.5)">
+                  <path
+                     id="RPN7"
+                     d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h200c49 0 88 40 88 89v20c0 49-39 88-88 88h-100"
+                     fill="#dad371" />
+                </g>
+                <rect
+                   id="rect2985-4-4-6"
+                   ry="88.6"
+                   height="197"
+                   width="377"
+                   stroke="#000000"
+                   y="428"
+                   x="183"
+                   stroke-width="1.92"
+                   fill="none" />
+              </g>
+              <g
+                 id="g7357"
+                 transform="translate(21.6,-2.62)">
+                <rect
+                   id="rect6043-2-4-8-8"
+                   fill-opacity=".596"
+                   rx="20.5"
+                   ry="9.57"
+                   height="44.6"
+                   width="317"
+                   y="-27.3"
+                   x="-1650"
+                   fill="#ffffff" />
+                <text
+                   id="text4078-45-6-0-5-3"
+                   font-size="50px"
+                   line-height="125%"
+                   xml:space="preserve"
+                   style="word-spacing:0px;letter-spacing:0px"
+                   transform="scale(1.7 .587)"
+                   y="13.714014"
+                   x="-960.76392"
+                   font-family="'Courier 10 Pitch'"
+                   fill="#000000"><tspan
+                     id="tspan4080-6-9-0-4-2"
+                     font-size="61.1px"
+                     font-weight="600"
+                     y="13.714014"
+                     x="-960.76392"
+                     font-family="FreeSans">RPN7</tspan></text>
+              </g>
+            </g>
+            <path
+               id="path3351-3-23-9-7-3-3"
+               opacity=".51"
+               d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+               transform="matrix(4.95 0 0 2.29 6080 -1770)"
+               filter="url(#filter4161-6-79-7-2-8-2-10)"
+               fill="#ffffff" />
+          </g>
+          <g
+             id="g1150"
+             transform="translate(-1.87)">
+            <g
+               id="g6064-360-2-6"
+               transform="matrix(.423 0 0 1.23 -140 51)">
+              <g
+                 id="g7409">
+                <g
+                   id="g3832-27-1"
+                   transform="matrix(-1.56 0 0 .555 -914 -295)">
+                  <g
+                     id="g3828-41-63"
+                     transform="translate(946,19.5)">
+                    <path
+                       id="RPN3a"
+                       d="m-574 408h100c49 0 88 40 88 89v20c0 49-39 88-88 88h-100"
+                       fill="#dad371" />
+                    <path
+                       id="RPN3b"
+                       d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h100"
+                       fill="#dad371" />
+                    <path
+                       id="path4239-3-56-92"
+                       stroke="#000000"
+                       stroke-width="1.92"
+                       fill="none"
+                       d="m-574 408v197" />
+                  </g>
+                  <rect
+                     id="rect2985-4-12"
+                     ry="88.6"
+                     height="197"
+                     width="377"
+                     stroke="#000000"
+                     y="428"
+                     x="183"
+                     stroke-width="1.92"
+                     fill="none" />
+                </g>
+                <g
+                   id="g7399"
+                   transform="translate(-3.04,1.63)">
+                  <rect
+                     id="rect6043-2-4-8"
+                     fill-opacity="0.596"
+                     rx="20.6"
+                     ry="9.57"
+                     height="44.6"
+                     width="319"
+                     y="-26.9"
+                     x="-1650"
+                     fill="#ffffff" />
+                  <text
+                     id="text4078-45-6-0-5"
+                     font-size="50px"
+                     line-height="125%"
+                     xml:space="preserve"
+                     style="word-spacing:0px;letter-spacing:0px"
+                     transform="scale(1.7 .587)"
+                     y="13.714014"
+                     x="-960.76392"
+                     font-family="'Courier 10 Pitch'"
+                     fill="#000000"><tspan
+                       id="tspan4080-6-9-0-4"
+                       font-size="61.1px"
+                       font-family="FreeSans"
+                       y="13.714014"
+                       x="-960.76392"
+                       font-weight="600">RPN3</tspan></text>
+                </g>
+              </g>
+            </g>
+            <path
+               id="path3351-3-23-9-7-3-61"
+               opacity=".51"
+               d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+               transform="matrix(4.95 0 0 2.29 6120 -1910)"
+               filter="url(#filter4161-6-79-7-2-8-2-2)"
+               fill="#ffffff" />
+          </g>
+          <g
+             id="g1135">
+            <g
+               id="g6064-360-2-6-6-2"
+               transform="matrix(.423 0 0 1.23 -400 73)">
+              <g
+                 id="g7388">
+                <g
+                   id="g3832-27-1-7"
+                   transform="matrix(-1.56 0 0 .555 -898 -302)">
+                  <g
+                     id="g3828-41-63-9"
+                     transform="translate(946,19.5)">
+                    <path
+                       id="RPN12a"
+                       d="m-574 408h100c49 0 88 40 88 89v20c0 49-39 88-88 88h-100"
+                       fill="#dad371" />
+                    <path
+                       id="RPN12b"
+                       d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h100"
+                       fill="#dad371" />
+                    <path
+                       id="path4239-3-56-92-9"
+                       stroke="#000000"
+                       stroke-width="1.92"
+                       fill="none"
+                       d="m-574 408v197" />
+                  </g>
+                  <rect
+                     id="rect2985-4-12-2"
+                     ry="88.6"
+                     height="197"
+                     width="377"
+                     stroke="#000000"
+                     y="428"
+                     x="183"
+                     stroke-width="1.92"
+                     fill="none" />
+                </g>
+                <g
+                   id="g7378"
+                   transform="translate(-12.04,-4.66)">
+                  <rect
+                     id="rect6043-2-4-8-8-2"
+                     fill-opacity="0.596"
+                     rx="23.9"
+                     ry="9.57"
+                     height="44.6"
+                     width="369"
+                     y="-27.6"
+                     x="-1650"
+                     fill="#ffffff" />
+                  <text
+                     id="text4078-45-6-0-5-3-4"
+                     font-size="50px"
+                     line-height="125%"
+                     xml:space="preserve"
+                     style="word-spacing:0px;letter-spacing:0px"
+                     transform="scale(1.7 .587)"
+                     y="13.221438"
+                     x="-963.35168"
+                     font-family="'Courier 10 Pitch'"
+                     fill="#000000"><tspan
+                       id="tspan4080-6-9-0-4-2-7"
+                       font-size="61.1px"
+                       font-family="FreeSans"
+                       y="13.221438"
+                       x="-963.35168"
+                       font-weight="600">RPN12</tspan></text>
+                </g>
+              </g>
+            </g>
+            <path
+               id="path3351-3-23-9-7-3-47"
+               opacity=".51"
+               d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+               transform="matrix(4.95 0 0 2.29 5870 -1900)"
+               filter="url(#filter4161-6-79-7-2-8-2-5)"
+               fill="#ffffff" />
+          </g>
+          <g
+             id="g1120">
+            <g
+               id="g6064-360-2-6-6-08"
+               transform="matrix(.423 0 0 1.23 -658 51)">
+              <g
+                 id="g7430">
+                <g
+                   id="g3832-27-4-6-2"
+                   transform="matrix(-1.56 0 0 .555 -880 -304)">
+                  <g
+                     id="g3828-41-3-4-6"
+                     transform="translate(946,19.5)">
+                    <path
+                       id="RPN8a"
+                       d="m-574 408h100c49 0 88 40 88 89v20c0 49-39 88-88 88h-100"
+                       fill="#dad371" />
+                    <path
+                       id="RPN8b"
+                       d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h100"
+                       fill="#dad371" />
+                    <path
+                       id="path4239-3-56-92-2"
+                       stroke="#000000"
+                       stroke-width="1.92"
+                       fill="none"
+                       d="m-574 408v197" />
+                  </g>
+                  <rect
+                     id="rect2985-4-4-6-3"
+                     ry="88.6"
+                     height="197"
+                     width="377"
+                     stroke="#000000"
+                     y="428"
+                     x="183"
+                     stroke-width="1.92"
+                     fill="none" />
+                </g>
+                <g
+                   id="g7420"
+                   transform="translate(31.5,-7.68)">
+                  <rect
+                     id="rect6043-2-4-8-8-9"
+                     fill-opacity=".596"
+                     rx="20.7"
+                     ry="9.57"
+                     height="44.6"
+                     width="320"
+                     y="-26.9"
+                     x="-1650"
+                     fill="#ffffff" />
+                  <text
+                     id="text4078-45-6-0-5-3-0"
+                     font-size="50px"
+                     line-height="125%"
+                     xml:space="preserve"
+                     style="word-spacing:0px;letter-spacing:0px"
+                     transform="scale(1.7 .587)"
+                     y="13.714014"
+                     x="-960.76392"
+                     font-family="'Courier 10 Pitch'"
+                     fill="#000000"><tspan
+                       id="tspan4080-6-9-0-4-2-13"
+                       font-size="61.1px"
+                       font-weight="600"
+                       y="13.714014"
+                       x="-960.76392"
+                       font-family="FreeSans">RPN8</tspan></text>
+                </g>
+              </g>
+            </g>
+            <path
+               id="path3351-3-23-9-7-3-9"
+               opacity=".51"
+               d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+               transform="matrix(4.95 0 0 2.29 5620 -1920)"
+               filter="url(#filter4161-6-79-7-2-8-2-6)"
+               fill="#ffffff" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       id="g8642"
+       transform="matrix(.387 0 0 .387 -887 647)">
+      <g
+         id="g847">
+        <g
+           id="g1419"
+           transform="matrix(.515 0 0 .972 -612 631)">
+          <g
+             id="g6064"
+             transform="matrix(.821 0 0 1.26 -120 -49.6)">
+            <g
+               id="g7551">
+              <g
+                 id="g3832-27"
+                 transform="matrix(.95 0 0 1 -1860 -530)">
+                <g
+                   id="g3828-41"
+                   transform="translate(946,19.5)">
+                  <path
+                     id="RPT1b"
+                     fill="#dad371"
+                     d="m-574 408h100c49 0 88 40 88 89v20c0 49-39 88-88 88h-100" />
+                  <path
+                     id="RPT1a"
+                     fill="#dad371"
+                     d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h100" />
+                  <path
+                     id="path4239-3"
+                     d="m-574 408v198"
+                     stroke="#000000"
+                     stroke-width="1.84"
+                     fill="none" />
+                </g>
+                <rect
+                   id="aaa"
+                   ry="88.6"
+                   height="197"
+                   width="377"
+                   stroke="#000000"
+                   y="428"
+                   x="183"
+                   stroke-width="1.84"
+                   fill="none" />
+              </g>
+              <g
+                 id="g7541"
+                 transform="translate(-7.075,1.71)">
+                <rect
+                   id="rect6043"
+                   fill-opacity="0.596"
+                   rx="31.1"
+                   ry="9.57"
+                   height="44.6"
+                   width="300"
+                   y="-27.6"
+                   x="-1650"
+                   fill="#ffffff" />
+                <text
+                   id="text4078-45"
+                   font-size="50px"
+                   xml:space="preserve"
+                   transform="scale(1.7 .587)"
+                   style="word-spacing:0px;letter-spacing:0px"
+                   y="13.221438"
+                   x="-959.16083"
+                   font-family="'Courier 10 Pitch'"
+                   line-height="125%"
+                   fill="#000000"><tspan
+                     id="tspan4080-6"
+                     font-family="FreeSans"
+                     font-size="61.1px"
+                     y="13.221438"
+                     x="-959.16083"
+                     font-weight="600">RPT1</tspan></text>
+              </g>
+            </g>
+          </g>
+          <path
+             id="path3351-3"
+             opacity="0.51"
+             d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+             transform="matrix(5.92 0 0 2.36 6884.9 -2120)"
+             filter="url(#filter4161-6-6)"
+             fill="#ffffff" />
+        </g>
+        <g
+           id="g1434"
+           transform="matrix(.515 0 0 .972 -612.51 631)">
+          <g
+             id="g6064-3"
+             transform="matrix(.821 0 0 1.26 181 -49.6)">
+            <g
+               id="g7572">
+              <g
+                 id="g3832-27-4"
+                 transform="matrix(.95 0 0 1 -1860 -530)">
+                <g
+                   id="g3828-41-3"
+                   transform="translate(946,19.5)">
+                  <path
+                     id="RPT5b"
+                     fill="#dad371"
+                     d="m-574 408h100c49 0 88 40 88 89v20c0 49-39 88-88 88h-100" />
+                  <path
+                     id="RPT5a"
+                     fill="#dad371"
+                     d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h100" />
+                  <path
+                     id="path4239-3-6"
+                     d="m-574.5 408v198"
+                     stroke="#000000"
+                     stroke-width="1.84"
+                     fill="none" />
+                </g>
+                <rect
+                   id="rect2985-4-4"
+                   ry="88.6"
+                   height="197"
+                   width="377"
+                   stroke="#000000"
+                   y="428"
+                   x="183"
+                   stroke-width="1.84"
+                   fill="none" />
+              </g>
+              <g
+                 id="g7562"
+                 transform="translate(-7.075,1.71)">
+                <rect
+                   id="rect6043-8"
+                   fill-opacity="0.596"
+                   rx="31.1"
+                   ry="9.57"
+                   height="44.6"
+                   width="300"
+                   y="-27.6"
+                   x="-1650"
+                   fill="#ffffff" />
+                <text
+                   id="text4078-45-8"
+                   font-size="50px"
+                   xml:space="preserve"
+                   transform="scale(1.7 .587)"
+                   style="word-spacing:0px;letter-spacing:0px"
+                   y="12.519058"
+                   x="-963.40564"
+                   font-family="'Courier 10 Pitch'"
+                   line-height="125%"
+                   fill="#000000"><tspan
+                     id="tspan4080-6-4"
+                     font-family="FreeSans"
+                     font-size="61.1px"
+                     y="12.519058"
+                     x="-963.40564"
+                     font-weight="600">RPT5</tspan></text>
+              </g>
+            </g>
+          </g>
+          <path
+             id="path3351-3-2"
+             opacity="0.51"
+             d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+             transform="matrix(5.92 0 0 2.36 7185.9 -2120)"
+             filter="url(#filter4161-6-9)"
+             fill="#ffffff" />
+        </g>
+        <g
+           id="g1449"
+           transform="matrix(.515 0 0 .972 -613.54 631)">
+          <g
+             id="g6064-3-0"
+             transform="matrix(.821 0 0 1.26 483 -49.6)">
+            <g
+               id="g7593">
+              <g
+                 id="g3832-27-7"
+                 transform="matrix(.95 0 0 1 -1860 -530)">
+                <g
+                   id="g3828-41-2"
+                   transform="translate(946,19.5)">
+                  <path
+                     id="RPT4b"
+                     fill="#dad371"
+                     d="m-574 408h100c49 0 88 40 88 89v20c0 49-39 88-88 88h-100" />
+                  <path
+                     id="RPT4a"
+                     fill="#dad371"
+                     d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h100" />
+                  <path
+                     id="path4239-3-7"
+                     d="m-574 408v198"
+                     stroke="#000000"
+                     stroke-width="1.84"
+                     fill="none" />
+                </g>
+                <rect
+                   id="rect2985-4-9"
+                   ry="88.6"
+                   height="197"
+                   width="377"
+                   stroke="#000000"
+                   y="428"
+                   x="183"
+                   stroke-width="1.84"
+                   fill="none" />
+              </g>
+              <g
+                 id="g7583"
+                 transform="translate(-7.075,1.71)">
+                <rect
+                   id="rect6043-8-0"
+                   fill-opacity="0.596"
+                   rx="31.1"
+                   ry="9.57"
+                   height="44.6"
+                   width="300"
+                   y="-27.6"
+                   x="-1650"
+                   fill="#ffffff" />
+                <text
+                   id="text4078-45-8-8"
+                   font-size="50px"
+                   xml:space="preserve"
+                   transform="scale(1.7 .587)"
+                   style="word-spacing:0px;letter-spacing:0px"
+                   y="13.221438"
+                   x="-963.55835"
+                   font-family="'Courier 10 Pitch'"
+                   line-height="125%"
+                   fill="#000000"><tspan
+                     id="tspan4080-6-4-6"
+                     font-family="FreeSans"
+                     font-size="61.1px"
+                     y="13.221438"
+                     x="-963.55835"
+                     font-weight="600">RPT4</tspan></text>
+              </g>
+            </g>
+          </g>
+          <path
+             id="path3351-3-9"
+             opacity="0.51"
+             d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+             transform="matrix(5.92 0 0 2.36 7487.9 -2120)"
+             filter="url(#filter4161-6-7)"
+             fill="#ffffff" />
+        </g>
+        <g
+           id="g1462"
+           transform="matrix(.515 0 0 .972 -613.54 631)">
+          <g
+             id="g6064-3-8"
+             transform="matrix(.821 0 0 1.26 783 -49.6)">
+            <g
+               id="g7613">
+              <g
+                 id="g3832-27-5"
+                 transform="matrix(.95 0 0 1 -1860 -530)">
+                <g
+                   id="g3828-41-6"
+                   transform="translate(946,19.5)">
+                  <path
+                     id="RPT3"
+                     fill="#dad371"
+                     d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h200c49 0 88 40 88 89v20c0 49-39 88-88 88h-100" />
+                </g>
+                <rect
+                   id="rect2985-4-5"
+                   ry="88.6"
+                   height="197"
+                   width="377"
+                   stroke="#000000"
+                   y="428"
+                   x="183"
+                   stroke-width="1.84"
+                   fill="none" />
+              </g>
+              <g
+                 id="g7604"
+                 transform="translate(-7.075,1.71)">
+                <rect
+                   id="rect6043-8-2"
+                   fill-opacity="0.596"
+                   rx="31.1"
+                   ry="9.57"
+                   height="44.6"
+                   width="300"
+                   y="-27.6"
+                   x="-1650"
+                   fill="#ffffff" />
+                <text
+                   id="text4078-45-8-3"
+                   font-size="50px"
+                   xml:space="preserve"
+                   transform="scale(1.7 .587)"
+                   style="word-spacing:0px;letter-spacing:0px"
+                   y="12.519058"
+                   x="-963.37512"
+                   font-family="'Courier 10 Pitch'"
+                   line-height="125%"
+                   fill="#000000"><tspan
+                     id="tspan4080-6-4-8"
+                     font-family="FreeSans"
+                     font-size="61.1px"
+                     y="12.519058"
+                     x="-963.37512"
+                     font-weight="600">RPT3</tspan></text>
+              </g>
+            </g>
+          </g>
+          <path
+             id="path3351-3-0"
+             opacity="0.51"
+             d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+             transform="matrix(5.92 0 0 2.36 7787.9 -2120)"
+             filter="url(#filter4161-6-3)"
+             fill="#ffffff" />
+        </g>
+        <g
+           id="g1477"
+           transform="matrix(.515 0 0 .972 -617.15 631)">
+          <g
+             id="g6064-3-5"
+             transform="matrix(.821 0 0 1.26 1090 -49.6)">
+            <g
+               id="g7633">
+              <g
+                 id="g3832-27-52"
+                 transform="matrix(.95 0 0 1 -1860 -530)">
+                <g
+                   id="g3828-41-1"
+                   transform="translate(946,19.5)">
+                  <path
+                     id="RPT6b"
+                     fill="#dad371"
+                     d="m-574 408h100c49 0 88 40 88 89v20c0 49-39 88-88 88h-100" />
+                  <path
+                     id="RPT6a"
+                     fill="#dad371"
+                     d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h100" />
+                  <path
+                     id="path4239-3-5"
+                     d="m-574 408v198"
+                     stroke="#000000"
+                     stroke-width="1.84"
+                     fill="none" />
+                </g>
+                <rect
+                   id="rect2985-4-1"
+                   ry="88.6"
+                   height="197"
+                   width="377"
+                   stroke="#000000"
+                   y="428"
+                   x="183"
+                   stroke-width="1.84"
+                   fill="none" />
+              </g>
+              <g
+                 id="g7623"
+                 transform="translate(-7.075,1.71)">
+                <rect
+                   id="rect6043-8-05"
+                   fill-opacity="0.596"
+                   rx="31.1"
+                   ry="9.57"
+                   height="44.6"
+                   width="300"
+                   y="-27.6"
+                   x="-1650"
+                   fill="#ffffff" />
+                <text
+                   id="text4078-45-8-9"
+                   font-size="50px"
+                   xml:space="preserve"
+                   transform="scale(1.7 .587)"
+                   style="word-spacing:0px;letter-spacing:0px"
+                   y="12.519058"
+                   x="-963.46674"
+                   font-family="'Courier 10 Pitch'"
+                   line-height="125%"
+                   fill="#000000"><tspan
+                     id="tspan4080-6-4-2"
+                     font-family="FreeSans"
+                     font-size="61.1px"
+                     y="12.519058"
+                     x="-963.46674"
+                     font-weight="600">RPT6</tspan></text>
+              </g>
+            </g>
+          </g>
+          <path
+             id="path3351-3-8"
+             opacity="0.51"
+             d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+             transform="matrix(5.92 0 0 2.36 8094.9 -2120)"
+             filter="url(#filter4161-6-62)"
+             fill="#ffffff" />
+        </g>
+        <g
+           id="g1492"
+           transform="matrix(.515 0 0 .972 -612 631)">
+          <g
+             id="g6064-3-6"
+             transform="matrix(.821 0 0 1.26 1380 -49.6)">
+            <g
+               id="g7654">
+              <g
+                 id="g3832-27-6"
+                 transform="matrix(.95 0 0 1 -1860 -530)">
+                <g
+                   id="g3828-41-21"
+                   transform="translate(946,19.5)">
+                  <path
+                     id="RPT2b"
+                     fill="#dad371"
+                     d="m-574 408h100c49 0 88 40 88 89v20c0 49-39 88-88 88h-100" />
+                  <path
+                     id="RPT2a"
+                     fill="#dad371"
+                     d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h100" />
+                  <path
+                     id="path4239"
+                     d="m-574 408v198"
+                     stroke="#000000"
+                     stroke-width="1.84"
+                     fill="none" />
+                </g>
+                <rect
+                   id="rect2985-4-3"
+                   ry="88.6"
+                   height="197"
+                   width="377"
+                   stroke="#000000"
+                   y="428"
+                   x="183"
+                   stroke-width="1.84"
+                   fill="none" />
+              </g>
+              <g
+                 id="g7644"
+                 transform="translate(-7.075,1.71)">
+                <rect
+                   id="rect6043-8-8"
+                   fill-opacity="0.596"
+                   rx="31.1"
+                   ry="9.57"
+                   height="44.6"
+                   width="300"
+                   y="-27.6"
+                   x="-1650"
+                   fill="#ffffff" />
+                <text
+                   id="text4078-45-8-5"
+                   font-size="50px"
+                   xml:space="preserve"
+                   transform="scale(1.7 .587)"
+                   style="word-spacing:0px;letter-spacing:0px"
+                   y="13.221438"
+                   x="-963.34454"
+                   font-family="'Courier 10 Pitch'"
+                   line-height="125%"
+                   fill="#000000"><tspan
+                     id="tspan4080-6-4-28"
+                     font-family="FreeSans"
+                     font-size="61.1px"
+                     y="13.221438"
+                     x="-963.34454"
+                     font-weight="600">RPT2</tspan></text>
+              </g>
+            </g>
+          </g>
+          <path
+             id="path3351-3-23"
+             opacity="0.51"
+             d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+             transform="matrix(5.92 0 0 2.36 8384.9 -2120)"
+             filter="url(#filter4161-6-79)"
+             fill="#ffffff" />
+        </g>
+        <g
+           id="g1551"
+           transform="translate(-11.698 18.545)">
+          <g
+             id="g6805"
+             transform="matrix(-1,0,0,1,-1200,144)">
+            <g
+               id="g6064-360"
+               transform="matrix(-.423 0 0 1.23 -1470 347)">
+              <g
+                 id="g7675">
+                <g
+                   id="g3832-27-1-6-4"
+                   transform="matrix(-1.09 0 0 .872 -1090 -441)">
+                  <g
+                     id="g3828-41-63-0-3"
+                     transform="translate(946,19.5)">
+                    <path
+                       id="RPN1a"
+                       fill="#dad371"
+                       d="m-574 408h100c49 0 88 40 88 89v20c0 49-39 88-88 88h-100" />
+                    <path
+                       id="RPN1b"
+                       fill="#dad371"
+                       d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h100" />
+                    <path
+                       id="path4239-3-56-18"
+                       d="m-574 408v197"
+                       stroke="#000000"
+                       stroke-width="1.84"
+                       fill="none" />
+                  </g>
+                  <rect
+                     id="rect2985-4-12-5-3"
+                     ry="88.6"
+                     height="197"
+                     width="377"
+                     stroke="#000000"
+                     y="428"
+                     x="183"
+                     stroke-width="1.84"
+                     fill="none" />
+                </g>
+                <g
+                   id="g7665"
+                   transform="translate(5.065,23.5)">
+                  <rect
+                     id="rect6043-2"
+                     fill-opacity="0.596"
+                     rx="31.1"
+                     ry="9.57"
+                     height="44.6"
+                     width="300"
+                     y="-27.6"
+                     x="-1650"
+                     fill="#ffffff" />
+                  <text
+                     id="text4078-45-6"
+                     style="word-spacing:0px;letter-spacing:0px"
+                     xml:space="preserve"
+                     transform="scale(1.7 .587)"
+                     line-height="125%"
+                     font-size="50px"
+                     y="13.221438"
+                     x="-962.50098"
+                     font-family="'Courier 10 Pitch'"
+                     fill="#000000"><tspan
+                       id="tspan4080-6-9"
+                       font-size="61.1px"
+                       font-family="FreeSans"
+                       y="13.221438"
+                       x="-962.50098"
+                       font-weight="600">RPN1</tspan></text>
+                </g>
+              </g>
+            </g>
+          </g>
+          <path
+             id="path3351-3-23-9"
+             opacity="0.51"
+             d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+             transform="matrix(3.32,0,0,2.29,4260,-1480)"
+             filter="url(#filter4161-6-79-7-2)"
+             fill="#ffffff" />
+        </g>
+        <g
+           id="g1566">
+          <g
+             id="g6064-360-8"
+             transform="matrix(.423 0 0 1.23 110 362)">
+            <g
+               id="g7696">
+              <g
+                 id="g3832-27-1-6-1"
+                 transform="matrix(-1.32 0 0 .81 -1020 -431)">
+                <g
+                   id="g3828-41-63-0-9"
+                   transform="translate(946,19.5)">
+                  <path
+                     id="RPN2a"
+                     fill="#dad371"
+                     d="m-574 408h100c49 0 88 40 88 89v20c0 49-39 88-88 88h-100" />
+                  <path
+                     id="RPN2b"
+                     fill="#dad371"
+                     d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h100" />
+                  <path
+                     id="path4219"
+                     d="m-574 409v196"
+                     stroke="#000000"
+                     stroke-width="1.74"
+                     fill="none" />
+                </g>
+                <rect
+                   id="rect2985-4-12-5-9"
+                   ry="88.6"
+                   height="197"
+                   width="377"
+                   stroke="#000000"
+                   y="428"
+                   x="183"
+                   stroke-width="1.74"
+                   fill="none" />
+              </g>
+              <g
+                 id="g7686"
+                 transform="translate(-10.38 .453)">
+                <rect
+                   id="rect6043-2-7"
+                   fill-opacity="0.596"
+                   rx="31.1"
+                   ry="9.57"
+                   height="44.6"
+                   width="300"
+                   y="-27.6"
+                   x="-1650"
+                   fill="#ffffff" />
+                <text
+                   id="text4078-45-6-6"
+                   style="word-spacing:0px;letter-spacing:0px"
+                   xml:space="preserve"
+                   transform="scale(1.7 .587)"
+                   line-height="125%"
+                   font-size="50px"
+                   y="13.221438"
+                   x="-966.68469"
+                   font-family="'Courier 10 Pitch'"
+                   fill="#000000"><tspan
+                     id="tspan4080-6-9-5"
+                     font-size="61.1px"
+                     font-family="FreeSans"
+                     y="13.221438"
+                     x="-966.68469"
+                     font-weight="600">RPN2</tspan></text>
+              </g>
+            </g>
+          </g>
+          <path
+             id="path3351-3-23-9-7"
+             opacity="0.51"
+             d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+             transform="matrix(4.02,0,0,2.29,5070,-1630)"
+             filter="url(#filter4161-6-79-7-2-8)"
+             fill="#ffffff" />
+        </g>
+        <g
+           id="g1580"
+           transform="translate(-1.99,-1.99)">
+          <g
+             id="g7717"
+             transform="matrix(.423 0 0 1.23 110 197)">
+            <g
+               id="g3832-27-1-6"
+               transform="matrix(-1.19 0 0 .555 -1030 -298)">
+              <g
+                 id="g3828-41-63-0"
+                 transform="translate(946,19.5)">
+                <path
+                   id="RPN10"
+                   fill="#dad371"
+                   d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h200c49 0 88 40 88 89v20c0 49-39 88-88 88h-100" />
+              </g>
+              <rect
+                 id="rect2985-4-12-5"
+                 ry="88.6"
+                 height="197"
+                 width="377"
+                 stroke="#000000"
+                 y="428"
+                 x="183"
+                 stroke-width="2.2"
+                 fill="none" />
+            </g>
+            <g
+               id="g7707"
+               transform="translate(-6.585 -.823)">
+              <rect
+                 id="rect6043-2-4"
+                 fill-opacity="0.596"
+                 rx="23.9"
+                 ry="9.57"
+                 height="44.6"
+                 width="369"
+                 y="-27.6"
+                 x="-1650"
+                 fill="#ffffff" />
+              <text
+                 id="text4078-45-6-0"
+                 style="word-spacing:0px;letter-spacing:0px"
+                 xml:space="preserve"
+                 transform="scale(1.7 .587)"
+                 line-height="125%"
+                 font-size="50px"
+                 y="12.519058"
+                 x="-963.41278"
+                 font-family="'Courier 10 Pitch'"
+                 fill="#000000"><tspan
+                   id="tspan4080-6-9-0"
+                   font-size="61.1px"
+                   font-family="FreeSans"
+                   y="12.519058"
+                   x="-963.41278"
+                   font-weight="600">RPN10</tspan></text>
+            </g>
+          </g>
+          <path
+             id="path3351-3-23-9-7-1"
+             opacity="0.51"
+             d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+             transform="matrix(3.81,0,0,2.29,4790,-1770)"
+             filter="url(#filter4161-6-79-7-2-8-3)"
+             fill="#ffffff" />
+        </g>
+      </g>
+      <g
+         id="g8484">
+        <path
+           id="rect6967-6"
+           stroke="#000000"
+           stroke-width="2"
+           fill="none"
+           d="m-275 117h47v585h-47" />
+        <text
+           id="text6970-5"
+           style="word-spacing:0px;letter-spacing:0px"
+           font-family="FreeSans"
+           xml:space="preserve"
+           font-size="40px"
+           line-height="125%"
+           y="394.7869"
+           x="-214.96756"
+           font-weight="600"
+           fill="#000000"><tspan
+             id="tspan6972-7"
+             y="394.7869"
+             x="-214.96756">base</tspan><tspan
+             id="tspan7031"
+             y="444.7869"
+             x="-214.96756">complex</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g8496"
+       transform="matrix(.387 0 0 .387 -887 647)">
+      <g
+         id="g8330"
+         transform="translate(0,-10.1)">
+        <g
+           id="g1860"
+           transform="translate(.580)">
+          <g
+             id="g8107"
+             transform="translate(7.56,74.4)">
+            <g
+               id="g3832-7"
+               transform="matrix(.434 0 0 .772 -687 352)">
+              <g
+                 id="g3828-9"
+                 transform="translate(946,19.5)">
+                <path
+                   id="PAF2"
+                   d="m-574 408h100c49 0 88 40 88 89v20c0 49-39 88-88 88h-100"
+                   fill="#dad371" />
+                <path
+                   id="PAF1"
+                   d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h100"
+                   fill="#dad371" />
+                <path
+                   id="path4239-3-56-0"
+                   stroke="#000000"
+                   stroke-width="2.23"
+                   fill="none"
+                   d="m-574 408v197" />
+              </g>
+              <rect
+                 id="rect2985-37"
+                 ry="88.6"
+                 height="197"
+                 width="377"
+                 stroke="#000000"
+                 y="428"
+                 x="183"
+                 stroke-width="2.23"
+                 fill="none" />
+            </g>
+            <g
+               id="g6064-36-4"
+               transform="matrix(.423 0 0 1.23 118.25 764)">
+              <rect
+                 id="rect6043-7-35"
+                 fill-opacity="0.596"
+                 rx="26.4"
+                 ry="9.57"
+                 height="44.6"
+                 width="255"
+                 y="-27.6"
+                 x="-1650"
+                 fill="#ffffff" />
+              <text
+                 id="text4078-45-87-48"
+                 font-size="50px"
+                 line-height="125%"
+                 xml:space="preserve"
+                 style="word-spacing:0px;letter-spacing:0px"
+                 transform="scale(1.7 .587)"
+                 y="13.714014"
+                 x="-960.76392"
+                 font-family="'Courier 10 Pitch'"
+                 fill="#000000"><tspan
+                   id="tspan4080-6-2-73"
+                   font-size="61.1px"
+                   font-family="FreeSans"
+                   y="13.714014"
+                   x="-960.76392"
+                   font-weight="600">PAF</tspan></text>
+            </g>
+          </g>
+          <path
+             id="path3351-3-4-1"
+             opacity=".51"
+             d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+             transform="matrix(3.2 0 0 2.29 3940 -1130)"
+             filter="url(#filter4161-6-6-3)"
+             fill="#ffffff" />
+        </g>
+        <g
+           id="g1786"
+           transform="translate(6.63)">
+          <g
+             id="g8052"
+             transform="translate(7.41 74.4)">
+            <g
+               id="g3832"
+               transform="matrix(.434 0 0 .772 -1530 352)">
+              <g
+                 id="g3828"
+                 transform="translate(946,19.5)">
+                <path
+                   id="PAA2"
+                   d="m-574 408h100c49 0 88 40 88 89v20c0 49-39 88-88 88h-100"
+                   fill="#dad371" />
+                <path
+                   id="PAA1"
+                   d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h100"
+                   fill="#dad371" />
+                <path
+                   id="path4239-3-56"
+                   stroke="#000000"
+                   stroke-width="2.23"
+                   fill="none"
+                   d="m-574 408v197" />
+              </g>
+              <rect
+                 id="rect2985"
+                 ry="88.6"
+                 height="197"
+                 width="377"
+                 stroke="#000000"
+                 y="428"
+                 x="183"
+                 stroke-width="2.23"
+                 fill="none" />
+            </g>
+            <g
+               id="g6064-36"
+               transform="matrix(.423 0 0 1.23 -724.75 764)">
+              <rect
+                 id="rect6043-7"
+                 fill-opacity="0.596"
+                 rx="26.4"
+                 ry="9.57"
+                 height="44.6"
+                 width="255"
+                 y="-27.6"
+                 x="-1650"
+                 fill="#ffffff" />
+              <text
+                 id="text4078-45-87"
+                 font-size="50px"
+                 line-height="125%"
+                 xml:space="preserve"
+                 style="word-spacing:0px;letter-spacing:0px"
+                 transform="scale(1.7 .587)"
+                 y="13.714014"
+                 x="-960.76392"
+                 font-family="'Courier 10 Pitch'"
+                 fill="#000000"><tspan
+                   id="tspan4080-6-2"
+                   font-size="61.1px"
+                   font-family="FreeSans"
+                   y="13.714014"
+                   x="-960.76392"
+                   font-weight="600">PAA</tspan></text>
+            </g>
+          </g>
+          <path
+             id="path3351-3-4"
+             opacity=".51"
+             d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+             transform="matrix(3.2 0 0 2.29 3090 -1130)"
+             filter="url(#filter4161-6-6-3-5)"
+             fill="#ffffff" />
+        </g>
+        <g
+           id="g1802"
+           transform="translate(3.9)">
+          <g
+             id="g8063"
+             transform="translate(7.56,74.4)">
+            <g
+               id="g3832-5"
+               transform="matrix(.434 0 0 .772 -1360 352)">
+              <g
+                 id="g3828-6"
+                 transform="translate(946,19.5)">
+                <path
+                   id="PAB2"
+                   d="m-574 408h100c49 0 88 40 88 89v20c0 49-39 88-88 88h-100"
+                   fill="#dad371" />
+                <path
+                   id="PAB1"
+                   d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h100"
+                   fill="#dad371" />
+                <path
+                   id="path4239-3-56-2"
+                   stroke="#000000"
+                   stroke-width="2.23"
+                   fill="none"
+                   d="m-574 408v197" />
+              </g>
+              <rect
+                 id="rect2985-1"
+                 ry="88.6"
+                 height="197"
+                 width="377"
+                 stroke="#000000"
+                 y="428"
+                 x="183"
+                 stroke-width="2.23"
+                 fill="none" />
+            </g>
+            <g
+               id="g6064-36-6"
+               transform="matrix(.423 0 0 1.23 -554.75 764)">
+              <rect
+                 id="rect6043-7-6"
+                 fill-opacity="0.596"
+                 rx="26.4"
+                 ry="9.57"
+                 height="44.6"
+                 width="255"
+                 y="-27.6"
+                 x="-1650"
+                 fill="#ffffff" />
+              <text
+                 id="text4078-45-87-2"
+                 font-size="50px"
+                 line-height="125%"
+                 xml:space="preserve"
+                 style="word-spacing:0px;letter-spacing:0px"
+                 transform="scale(1.7 .587)"
+                 y="13.714014"
+                 x="-960.76392"
+                 font-family="'Courier 10 Pitch'"
+                 fill="#000000"><tspan
+                   id="tspan4080-6-2-9"
+                   font-size="61.1px"
+                   font-family="FreeSans"
+                   y="13.714014"
+                   x="-960.76392"
+                   font-weight="600">PAB</tspan></text>
+            </g>
+          </g>
+          <path
+             id="path3351-3-4-4"
+             opacity=".51"
+             d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+             transform="matrix(3.2 0 0 2.29 3260 -1130)"
+             filter="url(#filter4161-6-6-3-54)"
+             fill="#ffffff" />
+        </g>
+        <g
+           id="g1816"
+           transform="translate(1.32)">
+          <g
+             id="g8074"
+             transform="translate(7.56,74.4)">
+            <g
+               id="g3832-2"
+               transform="matrix(.434 0 0 .772 -1190 352)">
+              <g
+                 id="g3828-7"
+                 transform="translate(946,19.5)">
+                <path
+                   id="PAC2"
+                   d="m-574 408h100c49 0 88 40 88 89v20c0 49-39 88-88 88h-100"
+                   fill="#dad371" />
+                <path
+                   id="PAC1"
+                   d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h100"
+                   fill="#dad371" />
+                <path
+                   id="path4239-3-56-9"
+                   stroke="#000000"
+                   stroke-width="2.23"
+                   fill="none"
+                   d="m-574 408v197" />
+              </g>
+              <rect
+                 id="rect2985-6"
+                 ry="88.6"
+                 height="197"
+                 width="377"
+                 stroke="#000000"
+                 y="428"
+                 x="183"
+                 stroke-width="2.23"
+                 fill="none" />
+            </g>
+            <g
+               id="g6064-36-7"
+               transform="matrix(.423 0 0 1.23 -384.75 764)">
+              <rect
+                 id="rect6043-7-0"
+                 fill-opacity="0.596"
+                 rx="26.4"
+                 ry="9.57"
+                 height="44.6"
+                 width="255"
+                 y="-27.6"
+                 x="-1650"
+                 fill="#ffffff" />
+              <text
+                 id="text4078-45-87-3"
+                 font-size="50px"
+                 line-height="125%"
+                 xml:space="preserve"
+                 style="word-spacing:0px;letter-spacing:0px"
+                 transform="scale(1.7 .587)"
+                 y="13.714014"
+                 x="-960.76392"
+                 font-family="'Courier 10 Pitch'"
+                 fill="#000000"><tspan
+                   id="tspan4080-6-2-7"
+                   font-size="61.1px"
+                   font-family="FreeSans"
+                   y="13.714014"
+                   x="-960.76392"
+                   font-weight="600">PAC</tspan></text>
+            </g>
+          </g>
+          <path
+             id="path3351-3-4-0"
+             opacity=".51"
+             d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+             transform="matrix(3.2 0 0 2.29 3430 -1130)"
+             filter="url(#filter4161-6-6-3-4)"
+             fill="#ffffff" />
+        </g>
+        <g
+           id="g1830"
+           transform="translate(-1.26)">
+          <g
+             id="g8085"
+             transform="translate(7.56,74.4)">
+            <g
+               id="g3832-0"
+               transform="matrix(.434 0 0 .772 -1020 352)">
+              <g
+                 id="g3828-62"
+                 transform="translate(946,19.5)">
+                <path
+                   id="PAD2"
+                   d="m-574 408h100c49 0 88 40 88 89v20c0 49-39 88-88 88h-100"
+                   fill="#dad371" />
+                <path
+                   id="PAD1"
+                   d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h100"
+                   fill="#dad371" />
+                <path
+                   id="path4239-3-56-1"
+                   stroke="#000000"
+                   stroke-width="2.23"
+                   fill="none"
+                   d="m-574 408v197" />
+              </g>
+              <rect
+                 id="rect2985-8"
+                 ry="88.6"
+                 height="197"
+                 width="377"
+                 stroke="#000000"
+                 y="428"
+                 x="183"
+                 stroke-width="2.23"
+                 fill="none" />
+            </g>
+            <g
+               id="g6064-36-2"
+               transform="matrix(.423 0 0 1.23 -214.75 764)">
+              <rect
+                 id="rect6043-7-3"
+                 fill-opacity="0.596"
+                 rx="26.4"
+                 ry="9.57"
+                 height="44.6"
+                 width="255"
+                 y="-27.6"
+                 x="-1650"
+                 fill="#ffffff" />
+              <text
+                 id="text4078-45-87-5"
+                 font-size="50px"
+                 line-height="125%"
+                 xml:space="preserve"
+                 style="word-spacing:0px;letter-spacing:0px"
+                 transform="scale(1.7 .587)"
+                 y="13.714014"
+                 x="-960.76392"
+                 font-family="'Courier 10 Pitch'"
+                 fill="#000000"><tspan
+                   id="tspan4080-6-2-1"
+                   font-size="61.1px"
+                   font-family="FreeSans"
+                   y="13.714014"
+                   x="-960.76392"
+                   font-weight="600">PAD</tspan></text>
+            </g>
+          </g>
+          <path
+             id="path3351-3-4-6"
+             opacity=".51"
+             d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+             transform="matrix(3.2 0 0 2.29 3600 -1130)"
+             filter="url(#filter4161-6-6-3-7)"
+             fill="#ffffff" />
+        </g>
+        <g
+           id="g1844"
+           transform="translate(2.16)">
+          <g
+             id="g8096"
+             transform="translate(7.56,74.4)">
+            <g
+               id="g3832-59"
+               transform="matrix(.434 0 0 .772 -856 352)">
+              <g
+                 id="g3828-2"
+                 transform="translate(946,19.5)">
+                <path
+                   id="PAE2"
+                   d="m-574 408h100c49 0 88 40 88 89v20c0 49-39 88-88 88h-100"
+                   fill="#dad371" />
+                <path
+                   id="PAE1"
+                   d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h100"
+                   fill="#dad371" />
+                <path
+                   id="path4239-3-56-27"
+                   stroke="#000000"
+                   stroke-width="2.23"
+                   fill="none"
+                   d="m-574 408v197" />
+              </g>
+              <rect
+                 id="rect2985-36"
+                 ry="88.6"
+                 height="197"
+                 width="377"
+                 stroke="#000000"
+                 y="428"
+                 x="183"
+                 stroke-width="2.23"
+                 fill="none" />
+            </g>
+            <g
+               id="g6064-36-78"
+               transform="matrix(.423 0 0 1.23 -50.752 764)">
+              <rect
+                 id="rect6043-7-9"
+                 fill-opacity="0.596"
+                 rx="26.4"
+                 ry="9.57"
+                 height="44.6"
+                 width="255"
+                 y="-27.6"
+                 x="-1650"
+                 fill="#ffffff" />
+              <text
+                 id="text4078-45-87-4"
+                 font-size="50px"
+                 line-height="125%"
+                 xml:space="preserve"
+                 style="word-spacing:0px;letter-spacing:0px"
+                 transform="scale(1.7 .587)"
+                 y="13.714014"
+                 x="-960.76392"
+                 font-family="'Courier 10 Pitch'"
+                 fill="#000000"><tspan
+                   id="tspan4080-6-2-16"
+                   font-size="61.1px"
+                   font-family="FreeSans"
+                   y="13.714014"
+                   x="-960.76392"
+                   font-weight="600">PAE</tspan></text>
+            </g>
+          </g>
+          <path
+             id="path3351-3-4-3"
+             opacity=".51"
+             d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+             transform="matrix(3.2 0 0 2.29 3770 -1130)"
+             filter="url(#filter4161-6-6-3-8)"
+             fill="#ffffff" />
+        </g>
+        <g
+           id="g1872">
+          <g
+             id="g8118"
+             transform="translate(7.56,74.4)">
+            <g
+               id="g3832-7-1"
+               transform="matrix(.434 0 0 .772 -519 352)">
+              <g
+                 id="g3828-9-2"
+                 transform="translate(946,19.5)">
+                <path
+                   id="PAG1"
+                   d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h200c49 0 88 40 88 89v20c0 49-39 88-88 88h-100"
+                   fill="#dad371" />
+              </g>
+              <rect
+                 id="rect2985-37-1"
+                 ry="88.6"
+                 height="197"
+                 width="377"
+                 stroke="#000000"
+                 y="428"
+                 x="183"
+                 stroke-width="2.23"
+                 fill="none" />
+            </g>
+            <g
+               id="g6064-36-3"
+               transform="matrix(.423 0 0 1.23 286.25 764)">
+              <rect
+                 id="rect6043-7-5"
+                 fill-opacity="0.596"
+                 rx="26.4"
+                 ry="9.57"
+                 height="44.6"
+                 width="255"
+                 y="-27.6"
+                 x="-1650"
+                 fill="#ffffff" />
+              <text
+                 id="text4078-45-87-0"
+                 font-size="50px"
+                 line-height="125%"
+                 xml:space="preserve"
+                 style="word-spacing:0px;letter-spacing:0px"
+                 transform="scale(1.7 .587)"
+                 y="13.714014"
+                 x="-960.76392"
+                 font-family="'Courier 10 Pitch'"
+                 fill="#000000"><tspan
+                   id="tspan4080-6-2-14"
+                   font-size="61.1px"
+                   font-family="FreeSans"
+                   y="13.714014"
+                   x="-960.76392"
+                   font-weight="600">PAG</tspan></text>
+            </g>
+          </g>
+          <path
+             id="path3351-3-4-68"
+             opacity=".51"
+             d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+             transform="matrix(3.2 0 0 2.29 4110 -1130)"
+             filter="url(#filter4161-6-6-3-49)"
+             fill="#ffffff" />
+        </g>
+        <g
+           id="g1772"
+           transform="translate(5.47 1.29)">
+          <g
+             id="g8256"
+             transform="translate(8.57,22.9)">
+            <g
+               id="g3832-79"
+               transform="matrix(.434 0 0 .772 -1530 558)">
+              <g
+                 id="g3828-4"
+                 transform="translate(946,19.5)">
+                <path
+                   id="PBA1"
+                   d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h200c49 0 88 40 88 89v20c0 49-39 88-88 88h-100"
+                   fill="#dad371" />
+              </g>
+              <rect
+                 id="rect2985-9"
+                 ry="88.6"
+                 height="197"
+                 width="377"
+                 stroke="#000000"
+                 y="428"
+                 x="183"
+                 stroke-width="2.23"
+                 fill="none" />
+            </g>
+            <g
+               id="g6064-36-70"
+               transform="matrix(.423 0 0 1.23 -726 970)">
+              <rect
+                 id="rect6043-7-7"
+                 fill-opacity=".596"
+                 rx="26.4"
+                 ry="9.57"
+                 height="44.6"
+                 width="255"
+                 y="-27.6"
+                 x="-1650"
+                 fill="#ffffff" />
+              <text
+                 id="text4078-45-87-8"
+                 font-size="50px"
+                 line-height="125%"
+                 xml:space="preserve"
+                 style="word-spacing:0px;letter-spacing:0px"
+                 transform="scale(1.7 .587)"
+                 y="13.714014"
+                 x="-960.76392"
+                 font-family="'Courier 10 Pitch'"
+                 fill="#000000"><tspan
+                   id="tspan4080-6-2-99"
+                   font-size="61.1px"
+                   font-weight="600"
+                   y="13.714014"
+                   x="-960.76392"
+                   font-family="FreeSans">PBA</tspan></text>
+            </g>
+          </g>
+          <path
+             id="path3351-3-4-66"
+             opacity=".51"
+             d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+             transform="matrix(3.2 0 0 2.29 3100 -978)"
+             filter="url(#filter4161-6-6-3-5-9)"
+             fill="#ffffff" />
+        </g>
+        <g
+           id="g1760"
+           transform="translate(2.89 1.29)">
+          <g
+             id="g8266"
+             transform="translate(8.57,22.9)">
+            <g
+               id="g3832-5-4"
+               transform="matrix(.434 0 0 .772 -1360 558)">
+              <g
+                 id="g3828-6-2"
+                 transform="translate(946,19.5)">
+                <path
+                   id="PBB2"
+                   d="m-574 408h100c49 0 88 40 88 89v20c0 49-39 88-88 88h-100"
+                   fill="#dad371" />
+                <path
+                   id="PBB1"
+                   d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h100"
+                   fill="#dad371" />
+                <path
+                   id="path4239-3-56-26"
+                   stroke="#000000"
+                   stroke-width="2.23"
+                   fill="none"
+                   d="m-574 407v198" />
+              </g>
+              <rect
+                 id="rect2985-1-5"
+                 ry="88.6"
+                 height="197"
+                 width="377"
+                 stroke="#000000"
+                 y="428"
+                 x="183"
+                 stroke-width="2.23"
+                 fill="none" />
+            </g>
+            <g
+               id="g6064-36-6-3"
+               transform="matrix(.423 0 0 1.23 -557 970)">
+              <rect
+                 id="rect6043-7-6-9"
+                 fill-opacity=".596"
+                 rx="26.4"
+                 ry="9.57"
+                 height="44.6"
+                 width="255"
+                 y="-27.6"
+                 x="-1650"
+                 fill="#ffffff" />
+              <text
+                 id="text4078-45-87-2-4"
+                 font-size="50px"
+                 line-height="125%"
+                 xml:space="preserve"
+                 style="word-spacing:0px;letter-spacing:0px"
+                 transform="scale(1.7 .587)"
+                 y="13.714014"
+                 x="-960.76392"
+                 font-family="'Courier 10 Pitch'"
+                 fill="#000000"><tspan
+                   id="tspan4080-6-2-9-6"
+                   font-size="61.1px"
+                   font-weight="600"
+                   y="13.714014"
+                   x="-960.76392"
+                   font-family="FreeSans">PBB</tspan></text>
+            </g>
+          </g>
+          <path
+             id="path3351-3-4-66-5"
+             opacity=".51"
+             d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+             transform="matrix(3.2 0 0 2.29 3270 -978)"
+             filter="url(#filter4161-6-6-3-5-9-4)"
+             fill="#ffffff" />
+        </g>
+        <g
+           id="g1940"
+           transform="translate(10.3 1.29)">
+          <g
+             id="g8277"
+             transform="translate(8.57,22.9)">
+            <g
+               id="g3832-2-9"
+               transform="matrix(.434 0 0 .772 -1200 558)">
+              <g
+                 id="g3828-7-5"
+                 transform="translate(946,19.5)">
+                <path
+                   id="PBC2"
+                   d="m-574 408h100c49 0 88 40 88 89v20c0 49-39 88-88 88h-100"
+                   fill="#dad371" />
+                <path
+                   id="PBC1"
+                   d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h100"
+                   fill="#dad371" />
+                <path
+                   id="path4239-3-56-06"
+                   stroke="#000000"
+                   stroke-width="2.23"
+                   fill="none"
+                   d="m-574 408v197" />
+              </g>
+              <rect
+                 id="rect2985-6-1"
+                 ry="88.6"
+                 height="197"
+                 width="377"
+                 stroke="#000000"
+                 y="428"
+                 x="183"
+                 stroke-width="2.23"
+                 fill="none" />
+            </g>
+            <g
+               id="g6064-36-7-4"
+               transform="matrix(.423 0 0 1.23 -389 970)">
+              <rect
+                 id="rect6043-7-0-5"
+                 fill-opacity=".596"
+                 rx="26.4"
+                 ry="9.57"
+                 height="44.6"
+                 width="255"
+                 y="-27.6"
+                 x="-1650"
+                 fill="#ffffff" />
+              <text
+                 id="text4078-45-87-3-5"
+                 font-size="50px"
+                 line-height="125%"
+                 xml:space="preserve"
+                 style="word-spacing:0px;letter-spacing:0px"
+                 transform="scale(1.7 .587)"
+                 y="13.714014"
+                 x="-960.76392"
+                 font-family="'Courier 10 Pitch'"
+                 fill="#000000"><tspan
+                   id="tspan4080-6-2-7-5"
+                   font-size="61.1px"
+                   font-weight="600"
+                   y="13.714014"
+                   x="-960.76392"
+                   font-family="FreeSans">PBC</tspan></text>
+            </g>
+          </g>
+          <path
+             id="path3351-3-4-66-8"
+             opacity=".51"
+             d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+             transform="matrix(3.2 0 0 2.29 3430 -978)"
+             filter="url(#filter4161-6-6-3-5-9-0)"
+             fill="#ffffff" />
+        </g>
+        <g
+           id="g1924"
+           transform="translate(7.73 1.29)">
+          <g
+             id="g8288"
+             transform="translate(8.57,22.9)">
+            <g
+               id="g3832-0-4"
+               transform="matrix(.434 0 0 .772 -1030 558)">
+              <g
+                 id="g3828-62-3"
+                 transform="translate(946,19.5)">
+                <path
+                   id="PBD2"
+                   d="m-574 408h100c49 0 88 40 88 89v20c0 49-39 88-88 88h-100"
+                   fill="#dad371" />
+                <path
+                   id="PBD1"
+                   d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h100"
+                   fill="#dad371" />
+                <path
+                   id="path4239-3-56-6"
+                   stroke="#000000"
+                   stroke-width="2.23"
+                   fill="none"
+                   d="m-574 408v197" />
+              </g>
+              <rect
+                 id="rect2985-8-7"
+                 ry="88.6"
+                 height="197"
+                 width="377"
+                 stroke="#000000"
+                 y="428"
+                 x="183"
+                 stroke-width="2.23"
+                 fill="none" />
+            </g>
+            <g
+               id="g6064-36-2-6"
+               transform="matrix(.423 0 0 1.23 -220 970)">
+              <rect
+                 id="rect6043-7-3-0"
+                 fill-opacity=".596"
+                 rx="26.4"
+                 ry="9.57"
+                 height="44.6"
+                 width="255"
+                 y="-27.6"
+                 x="-1650"
+                 fill="#ffffff" />
+              <text
+                 id="text4078-45-87-5-6"
+                 font-size="50px"
+                 line-height="125%"
+                 xml:space="preserve"
+                 style="word-spacing:0px;letter-spacing:0px"
+                 transform="scale(1.7 .587)"
+                 y="13.714014"
+                 x="-960.76392"
+                 font-family="'Courier 10 Pitch'"
+                 fill="#000000"><tspan
+                   id="tspan4080-6-2-1-2"
+                   font-size="61.1px"
+                   font-weight="600"
+                   y="13.714014"
+                   x="-960.76392"
+                   font-family="FreeSans">PBD</tspan></text>
+            </g>
+          </g>
+          <path
+             id="path3351-3-4-66-7"
+             opacity=".51"
+             d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+             transform="matrix(3.2 0 0 2.29 3600 -978)"
+             filter="url(#filter4161-6-6-3-5-9-7)"
+             fill="#ffffff" />
+        </g>
+        <g
+           id="g1910"
+           transform="translate(4.15 1.29)">
+          <g
+             id="g8299"
+             transform="translate(8.57,22.9)">
+            <g
+               id="g3832-59-4"
+               transform="matrix(.434 0 0 .772 -859 558)">
+              <g
+                 id="g3828-2-4"
+                 transform="translate(946,19.5)">
+                <path
+                   id="PBE2"
+                   d="m-574 408h100c49 0 88 40 88 89v20c0 49-39 88-88 88h-100"
+                   fill="#dad371" />
+                <path
+                   id="PBE1"
+                   d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h100"
+                   fill="#dad371" />
+                <path
+                   id="path4239-3-56-93"
+                   stroke="#000000"
+                   stroke-width="2.23"
+                   fill="none"
+                   d="m-574 408v197" />
+              </g>
+              <rect
+                 id="rect2985-36-3"
+                 ry="88.6"
+                 height="197"
+                 width="377"
+                 stroke="#000000"
+                 y="428"
+                 x="183"
+                 stroke-width="2.23"
+                 fill="none" />
+            </g>
+            <g
+               id="g6064-36-78-6"
+               transform="matrix(.423 0 0 1.23 -51.7 970)">
+              <rect
+                 id="rect6043-7-9-9"
+                 fill-opacity=".596"
+                 rx="26.4"
+                 ry="9.57"
+                 height="44.6"
+                 width="255"
+                 y="-27.6"
+                 x="-1650"
+                 fill="#ffffff" />
+              <text
+                 id="text4078-45-87-4-9"
+                 font-size="50px"
+                 line-height="125%"
+                 xml:space="preserve"
+                 style="word-spacing:0px;letter-spacing:0px"
+                 transform="scale(1.7 .587)"
+                 y="13.714014"
+                 x="-960.76392"
+                 font-family="'Courier 10 Pitch'"
+                 fill="#000000"><tspan
+                   id="tspan4080-6-2-16-2"
+                   font-size="61.1px"
+                   font-weight="600"
+                   y="13.714014"
+                   x="-960.76392"
+                   font-family="FreeSans">PBE</tspan></text>
+            </g>
+          </g>
+          <path
+             id="path3351-3-4-66-2"
+             opacity=".51"
+             d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+             transform="matrix(3.2 0 0 2.29 3770 -978)"
+             filter="url(#filter4161-6-6-3-5-9-2)"
+             fill="#ffffff" />
+        </g>
+        <g
+           id="g1896"
+           transform="translate(2.57 1.29)">
+          <g
+             id="g8310"
+             transform="translate(8.57,22.9)">
+            <g
+               id="g3832-7-3"
+               transform="matrix(.434 0 0 .772 -690 558)">
+              <g
+                 id="g3828-9-3"
+                 transform="translate(946,19.5)">
+                <path
+                   id="PBF1"
+                   d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h200c49 0 88 40 88 89v20c0 49-39 88-88 88h-100"
+                   fill="#dad371" />
+              </g>
+              <rect
+                 id="rect2985-37-4"
+                 ry="88.6"
+                 height="197"
+                 width="377"
+                 stroke="#000000"
+                 y="428"
+                 x="183"
+                 stroke-width="2.23"
+                 fill="none" />
+            </g>
+            <g
+               id="g6064-36-4-9"
+               transform="matrix(.423 0 0 1.23 117 970)">
+              <rect
+                 id="rect6043-7-35-6"
+                 fill-opacity=".596"
+                 rx="26.4"
+                 ry="9.57"
+                 height="44.6"
+                 width="255"
+                 y="-27.6"
+                 x="-1650"
+                 fill="#ffffff" />
+              <text
+                 id="text4078-45-87-48-5"
+                 font-size="50px"
+                 line-height="125%"
+                 xml:space="preserve"
+                 style="word-spacing:0px;letter-spacing:0px"
+                 transform="scale(1.7 .587)"
+                 y="13.714014"
+                 x="-960.76392"
+                 font-family="'Courier 10 Pitch'"
+                 fill="#000000"><tspan
+                   id="tspan4080-6-2-73-5"
+                   font-size="61.1px"
+                   font-weight="600"
+                   y="13.714014"
+                   x="-960.76392"
+                   font-family="FreeSans">PBF</tspan></text>
+            </g>
+          </g>
+          <path
+             id="path3351-3-4-66-6"
+             opacity=".51"
+             d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+             transform="matrix(3.2 0 0 2.29 3940 -978)"
+             filter="url(#filter4161-6-6-3-5-9-26)"
+             fill="#ffffff" />
+        </g>
+        <g
+           id="g1884"
+           transform="translate(1.99 1.29)">
+          <g
+             id="g8320"
+             transform="translate(8.57,22.9)">
+            <g
+               id="g3832-7-1-8"
+               transform="matrix(.434 0 0 .772 -522 558)">
+              <g
+                 id="g3828-9-2-3"
+                 transform="translate(946,19.5)">
+                <path
+                   id="PBG1"
+                   d="m-574 605h-100c-49 0-89-39-89-88v-20c0-49 40-89 89-89h200c49 0 88 40 88 89v20c0 49-39 88-88 88h-100"
+                   fill="#dad371" />
+              </g>
+              <rect
+                 id="rect2985-37-1-9"
+                 ry="88.6"
+                 height="197"
+                 width="377"
+                 stroke="#000000"
+                 y="428"
+                 x="183"
+                 stroke-width="2.23"
+                 fill="none" />
+            </g>
+            <g
+               id="g6064-36-3-3"
+               transform="matrix(.423 0 0 1.23 283.25 970)">
+              <rect
+                 id="rect6043-7-5-8"
+                 fill-opacity="0.596"
+                 rx="26.4"
+                 ry="9.57"
+                 height="44.6"
+                 width="255"
+                 y="-27.6"
+                 x="-1650"
+                 fill="#ffffff" />
+              <text
+                 id="text4078-45-87-0-6"
+                 font-size="50px"
+                 line-height="125%"
+                 xml:space="preserve"
+                 style="word-spacing:0px;letter-spacing:0px"
+                 transform="scale(1.7 .587)"
+                 y="13.714014"
+                 x="-960.76392"
+                 font-family="'Courier 10 Pitch'"
+                 fill="#000000"><tspan
+                   id="tspan4080-6-2-14-7"
+                   font-size="61.1px"
+                   font-family="FreeSans"
+                   y="13.714014"
+                   x="-960.76392"
+                   font-weight="600">PBG</tspan></text>
+            </g>
+          </g>
+          <path
+             id="path3351-3-4-66-9"
+             opacity=".51"
+             d="m-1390 839c10 2 10 6 10 8 0 1 10-3 10-8 0 0-10-8-10-9-10-2-20-2-30 0v9c-10 5 0 9 0 8 0-2 0-6 10-8 0-3 10-3 10 0z"
+             transform="matrix(3.2 0 0 2.29 4100 -978)"
+             filter="url(#filter4161-6-6-3-5-9-1)"
+             fill="#ffffff" />
+        </g>
+      </g>
+      <g
+         id="g8490">
+        <path
+           id="rect6967-6-7"
+           stroke="#000000"
+           stroke-width="2"
+           fill="none"
+           d="m-275 745h47v305h-47" />
+        <text
+           id="text6970-5-8"
+           style="word-spacing:0px;letter-spacing:0px"
+           font-weight="600"
+           xml:space="preserve"
+           font-size="40px"
+           line-height="125%"
+           y="880.95142"
+           x="-214.96756"
+           font-family="FreeSans"
+           fill="#000000"><tspan
+             id="tspan6972-7-8"
+             y="880.95142"
+             x="-214.96756">core</tspan><tspan
+             id="tspan7031-9"
+             y="930.95142"
+             x="-214.96756">complex</tspan></text>
+      </g>
+    </g>
+    <text
+       id="text4116"
+       style="word-spacing:0px;letter-spacing:0px"
+       xml:space="preserve"
+       font-size="36px"
+       line-height="125%"
+       y="665.36682"
+       x="-1053.7837"
+       font-family="'Courier 10 Pitch'"
+       fill="#000000"><tspan
+         id="tspan4118"
+         font-size="14px"
+         font-weight="600"
+         y="665.36682"
+         x="-1053.7837"
+         font-family="FreeSans" /></text>
+    <g
+       id="g2134"
+       transform="translate(0 6.24)">
+      <g
+         id="g8957"
+         transform="translate(24.5,-17.4)">
+        <rect
+           id="rect8865"
+           rx="0"
+           ry="0"
+           height="19.700001"
+           width="145"
+           y="643"
+           x="-1104.7567"
+           style="fill:url(#linearGradient8967);stroke:#000000;stroke-width:0.5" />
+        <g
+           id="g8925"
+           stroke="#000000"
+           stroke-width="1px"
+           fill="none"
+           transform="translate(0,2)">
+          <path
+             id="path8887"
+             d="m -1104.5623,629 v 10"
+             inkscape:connector-curvature="0" />
+          <path
+             id="path8887-4"
+             d="m-960 629v10" />
+        </g>
+        <text
+           id="text8930"
+           font-size="36px"
+           xml:space="preserve"
+           style="word-spacing:0px;letter-spacing:0px"
+           line-height="125%"
+           y="629.15607"
+           x="-1113.8947"
+           font-family="'Courier 10 Pitch'"
+           fill="#000000"><tspan
+             id="tspan8934"
+             font-size="16px"
+             font-weight="600"
+             y="629.15607"
+             x="-1113.8947"
+             font-family="FreeSans">38°C</tspan></text>
+        <text
+           id="text8930-0"
+           font-size="36px"
+           xml:space="preserve"
+           style="word-spacing:0px;letter-spacing:0px"
+           line-height="125%"
+           y="629.15607"
+           x="-969.60382"
+           font-family="'Courier 10 Pitch'"
+           fill="#000000"><tspan
+             id="tspan8934-8"
+             font-size="16px"
+             font-weight="600"
+             y="629.15607"
+             x="-969.60382"
+             font-family="FreeSans">58°C</tspan></text>
+      </g>
+      <rect
+         id="rect3346"
+         transform="translate(-1450,595)"
+         height="18.3"
+         width="23.1"
+         stroke="#000000"
+         y="58"
+         x="372"
+         stroke-width=".5"
+         fill="#dad371" />
+      <text
+         id="text4120"
+         font-size="36px"
+         xml:space="preserve"
+         style="word-spacing:0px;letter-spacing:0px"
+         line-height="125%"
+         y="666.64697"
+         x="-1052.425"
+         font-family="'Courier 10 Pitch'"
+         fill="#000000"><tspan
+           id="tspan4122"
+           y="666.64697"
+           x="-1052.425"
+           font-size="16px"
+           font-family="FreeSans">not modeled</tspan></text>
+    </g>
+  </g>
+</svg>

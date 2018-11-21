@@ -1,0 +1,265 @@
+%----------------------------------------------------------------------------%
+\subsection*{Thermostability of a plant proteome}
+%----------------------------------------------------------------------------%
+
+We have presented here the first in-depth look at the thermal proteome of a
+model plant. Out of the roughly 4,000 proteins identified in the samples,
+\Sexpr{nrow(HC)} were modeled in \numberstringnum{\Sexpr{cut_n_HC}} or more
+replicates with $\sem <$ \celsius{\Sexpr{cut_se_HC}}, representing
+high-confidence \Tm{} estimates and errors, and \Sexpr{nrow(MC)} protein
+\Tm{}s were estimated at the lower thresholds of the MC group. This database
+(in the form of estimated \Tm{}, melting temperature profiles,
+protein-specific measurement variances, and behavior of low-abundance proteins)
+represents a valuable resource for Arabidopsis researchers planning a TPP
+study. It is critical to recognize from the start of such an experiment that
+all proteins do not behave identically under the assumptions being made, and
+researchers can thus benefit from prior knowledge as to whether their proteins
+of interest are likely to ``behave well'' within the confines of the assay. In
+our experience, some proteins have highly consistent melting curves from
+experiment to experiment, while others have consistently high variance and
+many do not appear to behave according to the two-state model at all (Fig.
+\ref{fig:se} and File S\Sexpr{supp_indices[['all_models']]}). While biological
+replicates are absolutely critical in any downstream experimental design in
+order to infer shifts in \Tm{} at the individual protein level, proteins which
+display reproducible curves across the six replicates presented here, prepared
+at different times using multiple isolation techniques, will be better
+candidates for detecting small shifts in \Tm{} in future experiments than
+those with higher inherent variation.
+
+To be considered valid, the database presented here should be consistent with
+existing knowledge and expected results. Gene set enrichment was used both to
+validate the approach and to search for novel patterns in plant protein
+stability. The thermo-labile bin was found to be enriched in cytoskeletal
+proteins. Actin is known to respond to moderate heat stress in Arabidopsis and
+to readily adopt multiple conformations, so it is not surprising that its
+subunits would overwhelmingly fall into the unstable bin
+\cite{levitsky_thermal_2008, muller_cell-type-specific_2007}. Likewise, it
+would be expected that proteins involved in protein re-folding would require
+higher thermal stability to retain function under heat stress, and we observed
+enrichment for terms related to protein-folding in the stable bin. In
+addition, we observe higher thermostability in proteins involved in carbon
+fixation, including the three subunits of Rubisco modeled in the experiment.
+At the same time, the Rubisco activase protein RCA (AT2G39730) is amongst the
+least thermally stable proteins modeled (\Tm{} =
+\celsius{\Sexpr{round(use$mean[grep('AT2G39730',rownames(use))],1)}}. This is
+consistent with the current understanding of the relationship between
+photosynthesis and heat stress, where activated Rubisco has been found to increase in
+activity over increasing temperatures while its activase loses
+activity relatively quickly \cite{crafts-brandner_rubisco_2000,
+salvucci_relationship_2004}.
+
+Another observation arising from the gene set enrichment analysis was the
+segregation of core and regulatory 26S proteasomal subunits into different
+extremes of thermostability. Little has been published on the thermostability
+of the plant proteasome, but the results observed are perhaps not surprising.
+The proteasome proteolytic core is a highly structured unit composed of rings
+of $\alpha$ and $\beta$ isomers, while the regulatory base and lid are
+composed of proteins with a range of functions which serve in various aspects
+of ubiquitin recognition and ATP-dependent protein transport into the core. It
+is therefore not surprising that the regulatory complex would require a higher
+degree of conformational flexibility and thus unfold at lower temperatures. It
+is also possible that the role of the proteasome in stress response (including
+heat stress) may make thermal stability of the core proteasome important, as
+the core 20S proteasome itself is capable of degrading unfolded and damaged
+proteins in the absence of the regulatory complex.
+
+The observation that the main proteasomal complexes share \Tm{} profiles among
+subunits is also not surprising. Since our initial observations, this finding
+has been confirmed in human cells as part of a larger observation that tightly
+bound protein complexes tend to denature as a unit
+\cite{becher_pervasive_2018}. In fact, this tendency has been used as the basis
+of a technique to study protein associations (the `interactome') via conserved \Tm{} and
+\DeltaTm{} profiles between complexed proteins \cite{tan_thermal_2018}.
+
+
+%----------------------------------------------------------------------------%
+\subsection*{Correlation with protein properties}
+%----------------------------------------------------------------------------%
+
+Significant past effort has gone into discovering determinants of
+protein thermostability, defined herein as the relative ability of a protein to
+maintain a native conformation under increasing temperature. For the most part,
+this past work has focused on comparing protein structure (\primary and
+higher-level) between orthologs from mesophilic, thermophilic, and
+hyperthermophilic prokaryotes \cite{ikai_thermostability_1980,
+merkler_protein_1981, vogt_protein_1997, das_stability_2000,
+kumar_factors_2000, suhre_genomic_2003, berezovsky_physics_2005,
+razvi_lessons_2006, zhang_discrimination_2006, zeldovich_protein_2007,
+gromiha_discrimination_2008, montanucci_predicting_2008, ku_predicting_2009,
+mcdonald_temperature_2010, taylor_discrimination_2010, pucci_stability_2014}.
+In some cases a small number of experimental \Tm{}s were known (for example,
+taken from the ProTherm database) \cite{razvi_lessons_2006, ku_predicting_2009,
+pucci_stability_2014}, but often it has been assumed that characteristics that
+differentiate mesophilic from thermophilic primary protein sequences would also
+be general determinants of thermostability, justifying purely \textit{in
+silico} approaches on sequenced genomes \cite{das_stability_2000,
+kumar_factors_2000, mcdonald_temperature_2010}. More recent work by Leuenberger
+et al. utilized mass spectrometry together with limited proteolysis to estimate
+\Tm{}s for a large number of proteins in representative prokaryotic, fungal,
+and animal species \cite{leuenberger_cell-wide_2017} and found correlations
+between a number of chemical and structural characteristics of proteins and
+their relative degree of thermostability.
+
+Our observations on the correlation between fundamental protein
+characteristics and thermostability bolster many of the previously published
+observations but also differ in a few key aspects. Molecular weight
+was seen to be inversely correlated with \Tm{}, which is in agreement with
+previous observations \cite{ghosh_computing_2009, leuenberger_cell-wide_2017}.
+In comparative studies of mesophiles versus thermophiles, this observation usually
+comes with the caveat that group-specific trends in protein size may be caused
+by evolutionary pressures other than thermostability. However, our observation
+of a strong similar trend within a single plant proteome lends credence to the
+idea of a causal relationship between the two factors. We also observed a
+statistically significant increase in relative hydrophobicity with increasing
+\Tm{}. Previous mesophile/thermophile studies have come to mixed conclusions
+regarding this relationship, with Kumar et al. \cite{kumar_factors_2000}
+finding no correlation and McDonald \cite{mcdonald_temperature_2010} finding a
+positive correlation, in agreement with our results. Correlation with secondary
+structure was also in agreement with Leuenberger et al., with an increase in
+the proportion of residues residing in predicted \bsheet{}s and a decrease in
+\ahelix{} residues with increasing \Tm{}. Most published work examining
+differences in mesophilic and thermophilic proteomes report an increase in
+\ahelix{} residency in proteins of thermophilic organisms, suggesting that
+other evolutionary factors may be in play in those organisms
+\cite{kumar_factors_2000,merkler_protein_1981,vogt_protein_1997}. It is
+important to note that \bsheet{}s require special consideration, given that the
+readout of our assay involves protein precipitation upon unfolding and that
+\bsheet{}s are known to affect nonspecific protein aggregation. However, any
+such effect would tend to bias the results in the opposite direction as that
+observed, suggesting that any bias due to \bsheet{} content is negligible.
+
+Existing mesophile/thermophile literature suggests that
+\textit{charged-versus-polar} bias (CvP, i.e.\ the relative proportion of D,
+E, K and R versus N, Q, S and T) is a robust predictor of mesophilic and
+thermophilic orthologs and thus is thought to be involved in protein
+thermostability, with an increase in global CvP corresponding with an increase
+in optimum growth temperature \cite{suhre_genomic_2003}. However, in our own
+work with a plant extract we find a strong negative correlation between the
+two values in our data at the single protein level (Fig. \ref{fig:feats}).
+Indeed, D, E, K, and R are amongst the most statistically significant depleted
+amino acids in thermostable proteins, while S is strongly enriched (Fig.
+\ref{fig:aa_enrich}). This is partly in agreement with Leuenberger et al., who
+found a depletion in aspartic acid in thermostable proteins of \textit{E.
+coli}, although their observation of an enrichment in lysine does not agree
+with our results. Furthermore, we observed in a smaller subset of proteins
+with known tertiary structures that the depletion in charged residues extends
+to the protein surface. At the same time, non-polar residues are enriched on
+the surface of thermostable proteins. Clearly these features (for instance,
+overall charged residue composition and charged surface area) are
+interdependent, but the tertiary analysis strengthens the case for the
+importance of these specific amino acids in determining protein thermal
+stability.
+
+Other protein features examined (abundance, aliphatic index, isoelectric
+point, unstructured content), which in various reports have been correlated
+with protein thermostability, do not show statistically significant
+correlation in our data (Fig. \ref{fig:feats}b). Leuenberger et al. reported a
+``clear'' positive correlation between protein abundance and thermostability,
+but we observe no correlation or trend in our data. Abundance is a challenging
+trait to interpret, as the proteins most readily modeled in the assay are
+strongly biased toward the most abundant proteins in the proteome (this is
+true of most tandem MS studies). Additionally, there is a danger of specific
+classes of very abundant proteins skewing the results. This was seen in our
+data in the case of ribosomal proteins, which are highly enriched in the most
+unstable bin and which have specific chemical and structural attributes which
+may be completely unrelated to thermostability but which skew the results of
+feature correlation (they were removed prior to the final analysis).
+
+
+%----------------------------------------------------------------------------%
+\subsection*{Ribosomal thermostability}
+%----------------------------------------------------------------------------%
+
+While most of our observations correlate with those from other kingdoms
+published previously, the Arabidopsis ribosomal complexes showed marked
+thermal instability, in contrast with observations in Leuenberger et al and
+Becher et al \cite{leuenberger_cell-wide_2017,becher_pervasive_2018} in animal
+cells. While it is tempting to interpret this as a plant-specific behavior, it
+is also possible that extraction conditions play a role. Given the highly
+conserved nature of the ribosome, this is perhaps a more likely explanation.
+As with the 26S proteasome, it was not surprising to observe the ribosomal
+complex precipitating as a unit. We also see strong enrichment for eukaryotic
+initiation factors in the same thermo-labile bin as ribosomal subunits,
+suggesting co-aggregation of these proteins as part of the ribosomal complex.
+Of interest was the fact that the 60S acidic subunits displayed a markedly
+different melting profile, suggesting that they are less tightly associated
+with the ribosomal complex than the other subunits observed (Fig.
+\ref{fig:ribo_tms}). Clearly, further experimental work is needed to explain
+the observed behavior of plant ribosomal proteins in the assay as either a
+unique trait or a technical artifact.
+
+%----------------------------------------------------------------------------%
+\subsection*{Thermal shifts upon ATP treatment}
+%----------------------------------------------------------------------------%
+
+Using a broad-spectrum \textit{in vitro} treatment, we have demonstrated the
+suitability of TPP for probing changes in plant protein stability upon
+perturbation, with Mg-ATP as a positive control as used previously in other
+organisms \cite{savitski_tracking_2014}. While the lack of replicates prevents
+reliable interpretation of the data at the individual protein level, it is
+possible to examine differences in \DeltaTm{} distribution among global groups
+of proteins with statistical significance. The distribution of \DeltaTm{}s in
+annotated ATP-binding proteins appears bimodal, with a subset behaving like
+non-ATP-binding proteins and a subset with significant thermo-stabilization.
+This suggests a complex mechanism of stabilization upon ATP binding that acts
+differently on different classes of proteins. There is also a possibility that
+the level of occupancy of the ATP binding pocket in different protein groups
+prior to treatment can partly or fully explain the bimodal nature of the
+observed distributions. Indeed, when annotated kinases alone were analyzed,
+the distribution took on a more unimodal shape with a significant upshift
+in \DeltaTm{}. The sharpest and most significant shift of all was observed
+among annotated magnesium-binding proteins, a side-effect of using Mg-ATP as
+the treatment, despite the generally weak binding affinity of magnesium to
+proteins compared to other metal ions \cite{foster_metal_2014}. It is possible
+that the more marked effect observed in putative Mg-binding proteins is due to
+lower occupancy of the binding sites pre-treatment compared with ATP-binding
+proteins. As described above, gene set enrichment analysis of the data was
+consistent with an effect of ATP binding on thermal stability. While
+unreplicated data should be interepreted with great care at the single-protein
+level, plots of all proteins modeled are provided for inspection in File
+S\Sexpr{supp_indices[['atp_models']]} and proteins with large shifts
+(abs(\DeltaTm{}) > \Sexpr{delta_cutoff}) used in the GO analysis are
+included in File S\Sexpr{supp_indices[['atp_shift']]}.
+
+%----------------------------------------------------------------------------%
+\subsection*{Conclusions}
+%----------------------------------------------------------------------------%
+
+The primary aim of this study was to lay a groundwork for future studies utilizing TPP
+in plant systems. To this end, we have developed a database of \Tm{}, melting
+profiles and experimental variance data which will help guide future
+researchers using this tool. It is important to acknowledge that the results
+of work carried out \textit{in vitro} on extracts from plants grown in defined
+hydroponic media can only be interpreted with care in the context of
+real-world environmental conditions or even \textit{in vivo} experiments in the lab.
+Factors such as cytoplasmic protein concentration, small molecule interactions and
+cellular localization can be expected to have significant affects on thermal
+stability and molecular interactions. Difficulties in detecting and
+modeling less abundant proteins also narrow the scope of usefulness of the
+assay. With these limitations in mind, however, emerging technologies such as
+TPP present a wealth of new opportunities for plant researchers to pursue
+unknown cellular interactions at a large-scale level.
+
+A secondary aim of the study was to leverage the database of thermal profiling
+data to look for determinants of protein thermal stability, with a focus on
+characteristics unique to plants and the environments they face. We observed a
+number of features significantly correlated with \Tm{} that add to the body of
+knowledge in this area. We did not, however, observe any patterns that could
+confidently be interpreted as unique to the plant proteome, and this remains
+an area of active interest for future work. Lastly, these results provide a
+demonstration of the suitability of TPP combined with the thermal shift assay
+to detect conformational changes in the plant proteome. They complement work
+from other kingdoms and open up a new avenue of investigation to researchers
+interested in searching for novel protein-ligand interactions, providing the
+potential to more readily probe the effects of genetic and environmental
+perturbations on plant protein conformation.
+
+%----------------------------------------------------------------------------%
+\subsection*{Data availability}
+%----------------------------------------------------------------------------%
+
+The mass spectrometry raw data have been deposited to the ProteomeXchange
+Consortium via the PRIDE\cite{vizcaino_2016_2016} partner repository with the
+dataset identifier PXD011200. All input data as well as the \LaTeX{}/R/knitr
+source code to reproduce all results and figures in this manuscript are
+available at \url{https://github.com/Sussman-Lab/at_thermal_proteome}.

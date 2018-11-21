@@ -1,0 +1,25 @@
+<<fig_ribo, cache=FALSE, include=TRUE, echo=FALSE, fig.height=3.5, fig.width=3.5, dev=c("postscript","pdf"), dev.args=list(pointsize=9), background=NA>>=
+
+ribo_40S    <- scan("../R/lists/ribosomal_small.grp.list",what="character")
+ribo_60S    <- scan("../R/lists/ribosomal_large.grp.list",what="character")
+ribo_acidic <- scan("../R/lists/ribosomal_acidic.grp.list",what="character")
+ribo_chloro <- scan("../R/lists/ribosomal_bygo_chloro.grp.list",what="character")
+ribo_mito   <- scan("../R/lists/ribosomal_bygo_mito.grp.list",what="character")
+ 
+names <- c("40S","60S","60S acidic","chloroplastic","universe")
+
+boxplot(MC$mean[rownames(MC) %in% ribo_40S],
+  MC$mean[rownames(MC) %in% ribo_60S],
+  MC$mean[rownames(MC) %in% ribo_acidic],
+  MC$mean[rownames(MC) %in% ribo_chloro],
+  MC$mean,
+  col="gray",
+  names=NULL,
+  ylab=expression(T[m]),
+  xaxt='n',
+  cex=0.8
+)
+
+text(1:length(names), par("usr")[3] - 0.25, srt = 45, adj = c(1,1),
+     labels = names, xpd = TRUE)
+

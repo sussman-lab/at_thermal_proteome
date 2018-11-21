@@ -1,0 +1,140 @@
+%----------------------------------------------------------------------------%
+\subsection*{Protein quantification and modeling}
+%----------------------------------------------------------------------------%
+
+A total of 1.4 million MS2 spectra were collected from 74 offline high-pH
+RP-HPLC fractions of six biological replicates. Of these spectra, 313,710 were
+matched to tryptic peptides at a 1\% peptide FDR, representing
+\Sexpr{nrow(prot.filt)} identified proteins at a minimum \sw{ProteinProphet}
+probability of \Sexpr{min_prot_prob} (min.\
+\numberstringnum{\Sexpr{min_peptides}} distinct peptides per protein) (File
+S\Sexpr{supp_indices[['prophet']]}). After modeling and filtering as described
+above, a total of \Sexpr{n_modeled} unambiguous protein groups were assigned
+estimated \Tm{} values in at least one replicate. After filtering to remove
+proteins represented in more than one group, \Sexpr{nrow(d)} proteins
+remained. These proteins were further filtered at two levels of confidence.
+Group HC (``high confidence''; n=\Sexpr{nrow(HC)}) contained proteins modeled
+in \numberstringnum{\Sexpr{cut_n_HC}} or more replicates with $\sem <$
+\celsius{\Sexpr{cut_se_HC}} and from at least \Sexpr{cut_peps_HC} distinct
+peptides, and group MC (``medium confidence''; n=\Sexpr{nrow(MC)}) contained
+proteins modeled in \numberstringnum{\Sexpr{cut_n_MC}} or more replicates with
+$\sem <$ \celsius{\Sexpr{cut_se_MC}} and from \Sexpr{min_pep} or more distinct
+peptides. All further analyses refer to group \Sexpr{used_name}, except where
+noted. The distributions of \Tm{}s in all six replicates as well as the median
+distribution are shown in Figure \ref{fig:tm_dists}. The Tukey five-number
+summary for the \Sexpr{used_name} median \Tm{} distribution was:
+\Sexpr{paste(round(fivenum(use.orig$median),1),sep=", ")}. Melting curve plots
+for all \Sexpr{length(res.norm)} protein groups modeled are available in File
+S\Sexpr{supp_indices[['all_models']]} and plots for \Sexpr{used_name} proteins
+only are available in File S\Sexpr{supp_indices[['used_models']]}.
+
+%----------------------------------------------------------------------------%
+\subsection*{Features of thermostability}
+%----------------------------------------------------------------------------%
+
+Eight chemical and structural features for each quantified protein were
+examined for potential correlation with thermostability: molecular weight,
+protein abundance, aliphatic index (AI), isoelectric point (pI), relative
+hydrophobicity (GRAVY), charged versus polar residue bias (CvP), predicted
+secondary structure composition, and relative composition of each of the 20
+standard amino acids. All of these features were either calculated or
+predicted directly from primary amino acid sequence or found in published
+databases. Proteins in the \Sexpr{used_name} group were partitioned into four
+bins with equal membership and the bins were tested for statistically
+significant differences in feature distribution. Of the above features,
+molecular weight, hydrophobicity, CvP bias, and \ahelix{} and \bsheet{}
+composition showed highly significant correlation with relative
+thermostability (all $p < \Sexpr{max_sig}$ for both tests) (Fig.
+\ref{fig:feats}a). Molecular weight was observed to decrease with increasing
+\Tm{}, in agreement with previous observations \cite{ghosh_computing_2009,
+leuenberger_cell-wide_2017}, as did CvP bias. We observed a statistically
+significant increase in relative hydrophobicity with increasing \Tm{} as
+calculated by the GRAVY index \cite{kyte_simple_1982}, albeit with a small
+magnitude of change. Correlation with secondary structure showed an increase
+in the proportion of residues residing in predicted \bsheet{}s and a decrease
+in \ahelix{} residues with increasing \Tm{}. When examining specific amino
+acid composition, we found that the charged residues glutamic acid and
+arginine were highly depleted in thermostable proteins, while the polar
+residue serine is significantly enriched (Fig. \ref{fig:aa_enrich}). These
+three amino acids alone likely account for the strong correlation with CvP
+observed above. The full table of replicate \Tm{}s, mean \Tm{}s and variances
+for the \Sexpr{used_name} protein set, along with all calculated covariates,
+is available in File S\Sexpr{supp_indices[['covariates']]}.
+
+%----------------------------------------------------------------------------%
+\subsection*{Tertiary features of thermostability}
+%----------------------------------------------------------------------------%
+
+Of the \Sexpr{nrow(vadar)} nonredundant Arabidopsis protein structures
+compiled, \Sexpr{nrow(vadar.used)} had modeled \Tm{}s in the \Sexpr{used_name}
+protein set. The following features were extracted from the VADAR output:
+non-polar accessible surface area (ASA) relative to total ASA; relative polar
+ASA; relative charged ASA; total volume; and compactness (as described in the
+Methods). Quartile binning and correlation analysis were carried out as for
+\primary{} and \secondary{} features above. Of the features tested, non-polar
+ASA was positively correlated with thermostability at the 0.05 level based on
+the Mann-Whitney U-test ($p=\Sexpr{tertiary.p[['np']]}$) (Fig.
+\ref{fig:tertiary}). Charged ASA was seen to be negatively correlated with
+thermostability ($p=\Sexpr{tertiary.p[['chg']]}$). Other features, including protein
+compactness, did not show any significant trend.
+
+%----------------------------------------------------------------------------%
+\subsection*{Thermostability-associated functional enrichment}
+%----------------------------------------------------------------------------%
+
+Gene set enrichment analysis was performed on the lowest (unstable) and
+highest (stable) quartile bins of the \Sexpr{used_name} \Tm{} dataset to test
+whether specific bins were associated with functional classes. The results are
+presented in Tables \ref{tbl:gsea-unstable} and \ref{tbl:gsea-stable}. Within
+the unstable bin, enrichment in the three ontologies primarily involved
+ribosomal proteins/nucleic acid binding, proteasomal proteins, and
+cytoskeletal proteins. Within the stable bin, enrichment was found in terms
+relating to protein folding, carbon fixation, and the proteasome. Proteins
+involved in carbon fixation were highly enriched in the thermostable bin and
+included two PEP carboxylases, three RuBisCo subunits, and several other
+Calvin cycle proteins. Full result tables for all terms tested are available
+in File S\Sexpr{supp_indices[['go']]}.
+
+%----------------------------------------------------------------------------%
+\subsection*{The Arabidopsis proteasome}
+%----------------------------------------------------------------------------%
+
+It was observed during gene set enrichment analysis that proteasome subunits
+were enriched in both the lowest and highest bins. We therefore looked
+carefully at the \Tm{} distributions of each of the proteasomal proteins and
+found a marked difference in thermostability between core and regulatory
+subunits (Fig. \ref{fig:proteasome}). Many proteasomal subunits exist as
+multiple paralogs in the Arabidopsis genome, and at least one homolog of most
+subunits was modeled in our data. All modeled core subunits had \Tm{}s at the
+upper end of the proteome range, while all regulatory subunit \Tm{}s were in
+the lower bin. This is line with observations from other labs regarding
+co-precipitating protein complexes and is discussed further below.
+
+%----------------------------------------------------------------------------%
+\subsection*{Mg-ATP-induced thermal stability shifts}
+%----------------------------------------------------------------------------%
+
+In order to demonstrate the suitability of TPP-based thermal shift assays to
+detect treatment-induced conformational changes in complex plant extracts, we
+performed TPP on Arabidopsis lysates treated \textit{in vitro} with Mg-ATP or
+mock solutions and compared calculated \DeltaTm{} shifts upon treatment with
+existing protein functional annotations. The results of this comparison are
+shown in Fig. \ref{fig:atp}. There is a significant increase in
+Mg-ATP-induced \DeltaTm{}s among annotated kinases when compared with all
+other proteins (\textit{p} = \Sexpr{kinases.pval}). There is also an apparent
+enrichment in treatment-induced thermal upshifts in the more general annotated
+ATP-binding protein set, although the statistical significance was weak
+(\textit{p} = \Sexpr{atp_bind.pval}). Possible reasons for this weak effect
+are discussed in more detail below. Lastly, as Mg-ATP was used in the
+treatment, we also compared annotated magnesium-binding proteins versus all
+other modeled proteins and observed a highly significant stabilizing effect in
+this class (\textit{p} = \Sexpr{Mg_bind.pval}). Gene set enrichment analysis
+on the \DeltaTm{} values greater than \celsius{\Sexpr{delta_cutoff}} in either
+direction showed statistically significant enrichment ($p<0.01$) in stabilized
+proteins of terms related to known ATP binding classes, including `adenosine
+kinase activity' and `glucose-1-phosphate adenylyltransferase activity'.
+Interestingly, amongst the most significant enrichments in destablized
+proteins was the class `heterocylic compound binding', a parent term of
+ATP-binding proteins, suggesting that ATP binding can have both stabilizing
+and destablizing effects depending on the protein class (File
+S\Sexpr{supp_indices[['atp_go']]}).

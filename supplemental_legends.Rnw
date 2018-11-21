@@ -1,0 +1,56 @@
+\textbf{Table S\Sexpr{supp_indices[['prophet']]}}
+
+Results from protein identification using ProteinProphet. 
+
+\textbf{File S\Sexpr{supp_indices[['all_models']]}}
+
+Plots of all proteins modeled in the experiment. Vertical bars around data
+points represent 90\% confidence intervals based on bootstrap quantification.
+Vertical lines indicate \Tm{} and shading around vertical lines shows 90\%
+confidence interval for \Tm{} based on bootstrap modeling.
+
+\textbf{File S\Sexpr{supp_indices[['used_models']]}}
+
+Plots of proteins in the \Sexpr{used_name} filtered set used for correlation
+studies.
+
+\textbf{Table S\Sexpr{supp_indices[['covariates']]}}
+
+Quantification, modeling and covariate values for each protein modeled in the
+study. Columns are labeled with the replicate name followed by the metric.
+
+\textbf{Table S\Sexpr{supp_indices[['go']]}}
+
+Full results of Gene Ontology gene set enrichment on lower
+(\Sexpr{sprintf('%.1f-%.1f°C', bins.lower[1], bins.upper[1])})
+and upper
+(\Sexpr{sprintf('%.1f-%.1f°C', bins.lower[4], bins.upper[4])})
+stability bins. Each sheet is labeled with the bin number (1=lower, 4=upper)
+and the GO category (MF=molecular function, BP=biological process, CC=cellular
+component). Each row lists the category, the term tested, the number of
+proteins annotated with that term observed in the experiment overall, the
+number observed in the bin, the expected number in the bin given the overall
+distribution, and the p-value for that term. No multiple testing was applied
+as per the software authors' recommendations. 
+
+\textbf{Table S\Sexpr{supp_indices[['atp_go']]}}
+
+Full results of Gene Ontology gene set enrichment on \DeltaTm{} upon Mg-ATP
+treatment. Enrichment was tested in proteins sets with
+abs(\DeltaTm{})>\celsius{\Sexpr{delta_cutoff}}.
+Each sheet is labeled with the direction of change (up or down) 
+and the GO category (MF=molecular function, BP=biological process, CC=cellular
+component). Each row lists the category, the term tested, the number of
+proteins annotated with that term observed in the experiment overall, the
+number observed in the bin, the expected number in the bin given the overall
+distribution, and the p-value for that term. No multiple testing was applied
+as per the software authors' recommendations. 
+
+\textbf{File S\Sexpr{supp_indices[['atp_models']]}}
+
+Plots of all proteins modeled in the Mg-ATP binding experiment.
+
+\textbf{File S\Sexpr{supp_indices[['atp_shift']]}}
+
+Plots of proteins modeled in Mg-ATP binding experiment with abs(\DeltaTm{})
+> \celsius{\Sexpr{delta_cutoff}}.

@@ -1,0 +1,470 @@
+<<setup, cache=TRUE, include=FALSE, echo=FALSE>>=
+
+#initialize and model the data sets
+if(!require("mstherm")) install.packages("mstherm", repos="http://cran.us.r-project.org")
+
+library(mstherm)
+source("R/filters/filter.R")
+
+# modeling settings referenced in manuscript
+max_inf     <- 0.3
+min_tot_psm <- 10
+max_slope   <- -0.03
+min_pep     <- 2
+min_r2      <- 0.7
+
+expt <- MSThermExperiment("R/control", "R/TAIR10_annots.tsv")
+expt <- normalize_to_std(expt, "sp_ALBU_BOVIN_")
+res.nonorm <- model_experiment(expt, min_tot_psm=min_tot_psm, min_smp_psm=0, max_inf=max_inf, bootstrap=F, check_missing=T, smooth=T, only_modeled=T, max_slope=max_slope, min_r2=min_r2, min_pep=min_pep)
+expt.norm <- normalize_to_tm(expt,res.nonorm,mode=3,max_slope=0,min_r2=0)
+res.norm <- model_experiment(expt.norm, min_tot_psm=min_tot_psm, min_smp_psm=0, max_inf=max_inf, bootstrap=T, check_missing=T, smooth=T, only_modeled=T, max_slope=max_slope, min_r2=min_r2, min_pep=min_pep)
+
+@
+
+
+<<setup_atp, cache=TRUE, include=FALSE, echo=FALSE>>=
+
+library(mstherm)
+library(RColorBrewer)
+source("R/filters/filter.R")
+
+min_pep.atp = 2
+max_inf.atp = 0.4
+
+expt.atp <- MSThermExperiment("R/control.atp", "R/TAIR10_annots.tsv")
+expt.atp <- normalize_to_std(expt.atp, "sp_ALBU_BOVIN_")
+res.atp.nonorm <- model_experiment(expt.atp, min_tot_psm=8, min_smp_psm=4, max_inf=max_inf.atp, bootstrap=F, check_missing=T, smooth=T, only_modeled=T, max_slope=-0.03, min_r2=0.7, min_pep=min_pep.atp)
+expt.atp.norm <- normalize_to_tm(expt.atp,res.atp.nonorm,mode=3,max_slope=0,min_r2=0)
+res.atp.norm <- model_experiment(expt.atp.norm, min_tot_psm=8, min_smp_psm=4, max_inf=max_inf.atp, bootstrap=F, check_missing=T, smooth=T, only_modeled=T, max_slope=-0.03, min_r2=0.7, min_pep=min_pep.atp)
+
+d.atp     <- as.data.frame(res.atp.norm)
+delta.atp <- d.atp$ATP.tm - d.atp$Ctl.tm
+
+atp_binding   <- scan("R/lists/atp_binding.grp.list",what="character")
+Mg_binding <- scan("R/lists/Mg_bind.grp.list",what="character")
+kinases       <- scan("R/lists/kinases_byname.grp.list",what="character")
+
+atp_bind      <- delta.atp[rownames(d.atp)  %in% atp_binding]
+no_atp_bind   <- delta.atp[!rownames(d.atp) %in% atp_binding]
+
+Mg_bind      <- delta.atp[rownames(d.atp)  %in% Mg_binding]
+no_Mg_bind   <- delta.atp[!rownames(d.atp) %in% Mg_binding]
+
+kinase    <- delta.atp[rownames(d.atp)  %in% kinases]
+nokinase  <- delta.atp[!rownames(d.atp) %in% kinases]
+
+atp_bind.pval <- wilcox.test(
+    no_atp_bind,
+    atp_bind
+)$p.value
+
+Mg_bind.pval <- wilcox.test(
+    no_Mg_bind,
+    Mg_bind
+)$p.value
+
+kinases.pval <- wilcox.test(
+    nokinase,
+    kinase
+)$p.value
+
+
+delta_cutoff <- 4
+
+@
+
+
+<<setup_02, cache=FALSE, include=FALSE, echo=FALSE>>=
+
+library(mstherm)
+library(Hmisc)
+library(RColorBrewer)
+source("R/filters/filter.R")
+#library(knitr)
+options(digits=3)
+
+# set color palettes
+cols   <- brewer.pal(9,"Set1")
+cols2  <- colorRampPalette(cols[2:1])(4)
+n_reps <- 6
+
+tm_start     = 4
+cols_per_rep = 20
+
+#add summary statistics
+d <- as.data.frame(res.norm)
+d$n_modeled <- apply(d[,seq(from=tm_start,length.out=n_reps,by=cols_per_rep)],1,function(v) sum(!is.na(v)))
+d$median    <- apply(d[,seq(from=tm_start,length.out=n_reps,by=cols_per_rep)],1,function(v) median(v,na.rm=T))
+d$mean      <- apply(d[,seq(from=tm_start,length.out=n_reps,by=cols_per_rep)],1,function(v) mean(v,na.rm=T))
+d$sd        <- apply(d[,seq(from=tm_start,length.out=n_reps,by=cols_per_rep)],1,function(v) sd(v,na.rm=T))
+d$mad       <- apply(d[,seq(from=tm_start,length.out=n_reps,by=cols_per_rep)],1,function(v) mad(v,na.rm=T))
+d$iqr       <- apply(d[,seq(from=tm_start,length.out=n_reps,by=cols_per_rep)],1,function(v) IQR(v,na.rm=T))
+d$se        <- d$sd/sqrt(d$n_modeled)
+d$psm_sum   <- apply(d[,seq(from=tm_start+1,length.out=n_reps,by=cols_per_rep)],1,function(v) sum(v,na.rm=T))
+d$n_peps    <- apply(d[,seq(from=tm_start-2,length.out=n_reps,by=cols_per_rep)],1,function(v) min(v,na.rm=T))
+
+# filter redundant protein groups and add extra stats
+n_modeled <- nrow(d)
+d <- ext_filter(d, "R/filters/rm_redundant_groups.pl")
+d <- ext_filter(d, "R/filters/add_stats.pl", args=c("R/filters/TAIR10_stats.tsv"))
+d <- ext_filter(d, "R/filters/add_misc.pl", args=c("R/filters/TAIR10_garnier.tsv"))
+d <- ext_filter(d, "R/filters/add_misc.pl", args=c("R/filters/TAIR10_paxdb.tsv"))
+
+
+d$IVYWREL <- d$I + d$V + d$Y + d$W + d$R + d$E + d$L
+d$CvP <- d$D + d$E + d$K + d$R - d$N - d$Q - d$S - d$T
+
+all_se <- d$se[!is.na(d$se)]
+
+# filter on variance
+cut_se_HC <- 1.5
+cut_se_MC <- 1.8
+cut_n_HC  <- 3
+cut_n_MC  <- 2
+cut_peps_HC <- 3
+HC <- d[d$se < cut_se_HC & d$n_modeled >= cut_n_HC & d$n_peps >= cut_peps_HC,]
+MC <- d[d$se < cut_se_MC & d$n_modeled >= cut_n_MC,]
+
+# add bin numbers
+HC$bin4 <- as.numeric(cut2(HC$median, g=4))
+MC$bin4 <- as.numeric(cut2(MC$median, g=4))
+
+
+# control which set is used by default
+used_name <- 'HC'
+use <- HC
+use.orig <- use #unfiltered
+
+
+# calculate bin ranges
+bins.lower <- numeric()
+bins.upper <- numeric()
+for (i in 1:4) {
+    bins.lower[i] <- min(use$median[use$bin4 == i])
+    bins.upper[i] <- max(use$median[use$bin4 == i])
+}
+
+# filter ribosomal proteins for correlation analyses
+rm_ribo <- TRUE
+
+if (rm_ribo) {
+    ribo_IDs <- scan("R/lists/ribosomal_bygo.grp.list",what="character")
+    use <- use[!rownames(use) %in% ribo_IDs,]
+}
+
+# correlation figure
+
+cats <- c(
+    "mw",
+    "gravy",
+    "CvP",
+    "helix",
+    "sheet",
+    "pax_quant",
+    "ai",
+    "pi",
+    "coil"
+)
+titles <- c(
+    "molecular weight",
+    "hydrophobicity",
+    "CvP bias",
+    expression(paste(alpha,"-helix")),
+    expression(paste(beta,"-sheet")),
+    "abundance",
+    "aliphatic index",
+    "isoelectric point",
+    "random coil"
+)
+
+p.feats <- list()
+for (i in 1:9) {
+    print(cats[i])
+    w <- wilcox.test(
+        use[[ cats[i] ]][use$bin4 == 1], 
+        use[[ cats[i] ]][use$bin4 == 4]
+    )$p.value
+    s <- cor.test(
+        use[[ cats[i] ]],
+        use$bin4,
+        method="kendall",
+        continuity=F
+    )$p.value
+    print(w)
+    print(s)
+    p.feats[[ cats[i] ]] <- max(w,s)
+        
+}
+
+max_sig <- max(as.numeric(p.feats[1:5]))
+
+#read in ProteinProphet results
+
+prot <- read.delim("R/protein_prophet.tsv", header=T,row.names=1);
+min_prot_prob <- 0.9
+min_peptides  <- 2
+prot.filt <- prot[ prot$probability >= min_prot_prob & prot$n_peptides >= min_peptides, ]
+
+@
+
+
+<<setup_db, cache=FALSE, include=FALSE, echo=FALSE>>=
+
+if(!require("seqinr")) install.packages("seqinr", repos="http://cran.us.r-project.org")
+library(seqinr)
+
+search_db <- read.fasta(file="search/TAIR10_search.fasta")
+
+@
+
+
+<<setup_go, cache=FALSE, include=FALSE, echo=FALSE>>=
+
+if(!require("topGO")) {
+    source("https://bioconductor.org/biocLite.R")
+    biocLite("topGO")
+}
+library(topGO)
+if(!require("xlsx")) install.packages("xlsx", repos="http://cran.us.r-project.org")
+library(xlsx)
+
+geneID2GO <- readMappings(file="R/lists/TAIR10_go.list")
+genes <- list()
+genes[['bin1']] <- factor(as.integer(MC$bin4 == 1))
+genes[['bin4']] <- factor(as.integer(MC$bin4 == 4))
+names(genes[['bin1']]) <- rownames(MC)
+names(genes[['bin4']]) <- rownames(MC)
+
+dfs.go   <- list()
+rules.go <- list()
+
+cutoffs.go <- list()
+cutoffs.go$bin1 <- 0.002;
+cutoffs.go$bin4 <- 0.005;
+
+wb.go = createWorkbook()
+
+for (bin in c('bin1','bin4')) {
+
+    df.bin <- data.frame(category=character(),term=character(),annotated=numeric(),observed=numeric(),expected=numeric(),pvalue=numeric())
+    h <- colnames(df.bin)
+    h[6] <- "Fisher's p"
+    rules <- integer()
+
+    for(cat in c('MF','BP','CC')) {
+        data.go <- new("topGOdata", ontology=cat, allGenes=genes[[bin]], annot = annFUN.gene2GO, gene2GO= geneID2GO, nodeSize=3)
+        res.go  <- runTest(data.go, statistic="fisher", algorithm="elim")
+        tbl.go  <- GenTable(data.go,fisher=res.go,topNodes=length(score(res.go)))
+        tbl.go  <- cbind(rep(cat,nrow(tbl.go)),tbl.go)
+
+        #fix p-value column datatype
+        tbl.go$fisher <- as.numeric(tbl.go$fisher)
+        tbl.go$fisher[is.na(tbl.go$fisher)] <- 0
+
+        sheet = createSheet(wb.go, paste(bin, cat))
+
+        if (length(tbl.go$fisher[tbl.go$fisher < cutoffs.go[[bin]]]) > 0) {
+            df.bin   <- rbind(df.bin,tbl.go[tbl.go$fisher < cutoffs.go[[bin]],-2])
+            rules    <- c(rules,nrow(df.bin))
+        }
+        sub <- tbl.go[,-2]
+        colnames(sub) <- h
+        addDataFrame(sub, sheet=sheet, row.names=F)
+    }
+
+    colnames(df.bin) <- h
+    dfs.go[[bin]]    <- df.bin
+    rules.go[[bin]]  <- rules
+
+}
+
+@
+
+
+<<setup_tertiary, cache=FALSE, include=FALSE, echo=FALSE>>=
+
+if(!require("Hmisc")) install.packages("Hmisc", repos="http://cran.us.r-project.org")
+library(Hmisc)
+
+vadar <- read.delim("R/vadar.tsv",row.names=1)
+vadar.used <- merge(use,vadar,by=0);
+
+vadar.used$bin4    <- as.numeric(cut2(vadar.used$median,g=4))
+vadar.used$npfrac  <- vadar.used$nonpolar_asa/vadar.used$asa
+vadar.used$chgfrac <- vadar.used$charged_asa/vadar.used$asa
+
+tertiary.p <- list()
+
+tertiary.p$np <- wilcox.test(
+    vadar.used$npfrac[vadar.used$bin4==1],
+    vadar.used$npfrac[vadar.used$bin4==4]
+)$p.value
+
+tertiary.p$chg <- wilcox.test(
+    vadar.used$chgfrac[vadar.used$bin4==1],
+    vadar.used$chgfrac[vadar.used$bin4==4]
+)$p.value
+
+tertiary.p$cmp <- wilcox.test(
+    vadar.used$compactness[vadar.used$bin4==1],
+    vadar.used$compactness[vadar.used$bin4==4]
+)$p.value
+
+@
+
+<<setup_atp_go, cache=FALSE, include=FALSE, echo=FALSE>>=
+
+if(!require("topGO")) {
+    source("https://bioconductor.org/biocLite.R")
+    biocLite("topGO")
+}
+library(topGO)
+if(!require("xlsx")) install.packages("xlsx", repos="http://cran.us.r-project.org")
+library(xlsx)
+
+node_size    <- 2
+
+geneID2GO <- readMappings(file="R/lists/TAIR10_go.list")
+atp.genes <- list()
+atp.genes[['up']]   <- factor(as.integer(delta.atp >  delta_cutoff))
+atp.genes[['down']] <- factor(as.integer(delta.atp < -delta_cutoff))
+
+# otherwise we get 'NA' in 'expected column'
+atp.genes$up[is.na(atp.genes$up)]     <- 0
+atp.genes$down[is.na(atp.genes$down)] <- 0
+
+names(atp.genes[['up']])   <- rownames(d.atp)
+names(atp.genes[['down']]) <- rownames(d.atp)
+
+atp.dfs.go   <- list()
+atp.rules.go <- list()
+
+atp.cutoff.go <- 0.01
+
+atp.wb.go = createWorkbook()
+
+for (bin in c('up','down')) {
+
+    df.bin <- data.frame(category=character(),term=character(),annotated=numeric(),observed=numeric(),expected=numeric(),pvalue=numeric())
+    h <- colnames(df.bin)
+    h[6] <- "Fisher's p"
+    rules <- integer()
+
+    for(cat in c('MF','BP','CC')) {
+        data.go <- new("topGOdata", ontology=cat, allGenes=atp.genes[[bin]], annot = annFUN.gene2GO, gene2GO= geneID2GO, nodeSize=node_size)
+        res.go  <- runTest(data.go, statistic="fisher", algorithm="elim")
+        tbl.go  <- GenTable(data.go,fisher=res.go,topNodes=length(score(res.go)))
+        tbl.go  <- cbind(rep(cat,nrow(tbl.go)),tbl.go)
+
+        #fix p-value column datatype
+        tbl.go$fisher <- as.numeric(tbl.go$fisher)
+        tbl.go$fisher[is.na(tbl.go$fisher)] <- 0
+
+        sheet = createSheet(atp.wb.go, paste(bin, cat))
+
+        if (length(tbl.go$fisher[tbl.go$fisher < atp.cutoff.go]) > 0) {
+            df.bin   <- rbind(df.bin,tbl.go[tbl.go$fisher < atp.cutoff.go,-2])
+            rules    <- c(rules,nrow(df.bin))
+        }
+        sub <- tbl.go[,-2]
+        colnames(sub) <- h
+        addDataFrame(sub, sheet=sheet, row.names=F)
+    }
+
+    colnames(df.bin)    <- h
+    atp.dfs.go[[bin]]   <- df.bin
+    atp.rules.go[[bin]] <- rules
+
+}
+
+@
+
+
+<<supplement, cache=FALSE, include=FALSE, echo=FALSE>>=
+
+library(mstherm)
+
+# set supplemental iterator
+supp_iter <- 1
+supp_indices <- list()
+
+if(!require("xlsx")) install.packages("xlsx", repos="http://cran.us.r-project.org")
+library(xlsx)
+fname <- paste0("supplemental/S",supp_iter,"_protein_prophet.xlsx")
+supp_indices[['prophet']] <- supp_iter
+supp_iter <- supp_iter + 1
+write.xlsx2(prot.filt, fname, col.names=T)
+
+
+fname <- paste0("supplemental/S",supp_iter,"_all_models.pdf")
+supp_indices[['all_models']] <- supp_iter
+supp_iter <- supp_iter + 1
+pdf(fname,5,5,pointsize=9,useDingbats=F)
+set_mars()
+plot(res.norm)
+dev.off()
+
+
+fname <- paste0("supplemental/S",supp_iter,"_",used_name,"_models.pdf")
+supp_indices[['used_models']] <- supp_iter
+supp_iter <- supp_iter + 1
+pdf(fname,5,5,pointsize=9,useDingbats=F)
+set_mars()
+for (p in res.norm[rownames(use.orig)]) {
+    plot(p)
+}
+dev.off()
+
+
+# write supplemental data table
+rounded <- use.orig
+rounded[,-1] <- round(rounded[,-1],3)
+for (h in c(
+    "median",
+    "mean",
+    "sd",
+    "mad",
+    "iqr",
+    "se"
+)) {
+    new_h <- paste0("Tm_",h)
+    colnames(rounded)[colnames(rounded)==h] <- new_h
+}
+colnames(rounded)[colnames(rounded)=='bin4'] <- 'Tm_bin'
+
+fname <- paste0("supplemental/S",supp_iter,"_full_result_table.xlsx")
+supp_indices[['covariates']] <- supp_iter
+supp_iter <- supp_iter + 1
+write.xlsx2(rounded, fname, col.names=T)
+
+
+fname <- paste0("supplemental/S",supp_iter,"_GO_enrichment.xlsx")
+supp_indices[['go']] <- supp_iter
+supp_iter <- supp_iter + 1
+saveWorkbook(wb.go, fname)
+
+
+fname <- paste0("supplemental/S",supp_iter,"_ATP_GO_enrichment.xlsx")
+supp_indices[['atp_go']] <- supp_iter
+supp_iter <- supp_iter + 1
+saveWorkbook(atp.wb.go, fname)
+
+fname <- paste0("supplemental/S",supp_iter,"_MgATP_all.pdf")
+supp_indices[['atp_models']] <- supp_iter
+supp_iter <- supp_iter + 1
+pdf(fname,5,5,pointsize=9,useDingbats=F)
+set_mars()
+plot(res.atp.norm)
+dev.off()
+
+fname <- paste0("supplemental/S",supp_iter,"_MgATP_models_with_large_shift.pdf")
+supp_indices[['atp_shift']] <- supp_iter
+supp_iter <- supp_iter + 1
+pdf(fname,5,5,pointsize=9,useDingbats=F)
+set_mars()
+for (p in res.atp.norm[abs(delta.atp) > delta_cutoff]) {
+    if (!is.null(p)) {
+        plot(p)
+    }
+}
+dev.off()
